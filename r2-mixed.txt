@@ -1,7 +1,5 @@
 
-    basic 
-        项目是怎么回事？
-            用熟悉的语言实现一些新的算法，新的东西
+    // 
         算法是别人或者自己的，那怎么叫熟悉的语言？
             所有小task都可以毫不费力没有参考或者只参考笔记完成
             -这需要训练
@@ -10,9 +8,32 @@
         熟悉c++语言
             基本的概念了如指掌
             所有task信手拈来
-    book--c++ in 21 days
+        tasks 
+            在fw中input怎么办？ -- hardcoded, in a header file!
+            输出？ 横线作为标志 
+        编程和语言很像，都是模仿。深层次的模仿叫创造，浅层次的模仿叫抄袭
+        学cpp, 面向对象，算法有什么不同？ 
+            学cpp--没有错误就ok
+            算法--结果正确，高效
+    //
+        code reuse? --> ref. to pieces!
+        code judgement? 
+            + 
+            initial ideas: 
+                test cases, unit test(expected input output, use assert func.) -- have seen someone uses 
+                    consider about corner cases! software test! 
+                    use standard methods to gen. test cases!! 
+                benchmark
+                    a larger version of test cases!
+                    for computer vision, machine learning 
+                vis it!, plot it out, we can easily judge it! 
+                    for graphics 
+    seed
+        friend, namespace, make_shared, make_pair, map...
+        ...
+    book--TeachYourself c++ in one hour a day
         basic
-
+            ...
         oo in c++
         c++ IO
         STL lib.
@@ -53,7 +74,10 @@
                         双向链表，在任何位置增删元素都能在常数时间完成。    
                             不支持随机存取，查询的时候要从头开始。
         advanced 
-    book--xxx
+    book--c++ primer plus
+        basic 
+        friend 
+        ... 
     book--xxx
     ...
     summerize-theory review 
