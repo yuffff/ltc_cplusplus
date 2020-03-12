@@ -109,6 +109,73 @@
             comma-separated list followed by a colon. 
             Test(int &t):t(t) {}
             task- write a point class and initialize it with initializer List 
+        deconstructor 
+            A destructor function is called automatically when the object goes out of scope:
+                (1) the function ends
+                (2) the program ends
+                (3) a block containing local variables ends
+                (4) a delete operator is called 
+            qq Can there be more than one destructor in a class? n 
+            The default destructor works fine unless we have dynamically allocated memory or pointer in class.
+            When a class contains a pointer to memory allocated in class, we should write a destructor to release 
+                memory before the class instance is destroyed. This must be done to avoid memory leak.
+            task- constru. a string class and write a deconstructor for it! 
+        Copy elision (or Copy omission) 
+            a compiler optimization technique avoid too many copy operations 
+        The ‘fill’ function in STL 
+            assigns the value ‘val’ to all the elements in the range [begin, end)
+        c++ stl 
+            c++ vector loop! 
+                Vectors are same as dynamic arrays with the ability to resize itself automaticall
+                Vector elements are placed in contiguous storage so that they can be 
+                    accessed and traversed using iterators
+                lots of functions! 
+                    https://www.geeksforgeeks.org/vector-in-cpp-stl/
+                    Iterators 
+                        begin(),end()... 
+                    Capacity
+                        reserve() – Requests that the vector capacity be at least enough to contain n elements.
+                    Element access:
+                        at() 
+                        front() ... back()... 
+                    *Modifiers! train them all! maybe in one file
+                        push_back() 
+                        pop_back()
+                        insert() 
+                        erase() 
+                        emplace() 
+                        emplace_back()
+                        swap()
+                        ...
+                    qq diff. of  emplace_back and push_back? 
+                        Well in C++17 will return a reference to element that was just created in the vector where as push_back does not return anythin
+                        emplace_back will be more effi. when the case of passing an object such as a string 
+                    task- train them all! maybe in one file
+                        push_back() 
+                        pop_back()
+                        insert() 
+                        erase() 
+                        emplace() 
+                        emplace_back()
+                        swap()
+            list stru. 
+                Lists are sequence containers that allow non-contiguous memory allocation
+                As compared to vector, list has slow traversal, but once a position has been found, insertion and deletion are quick!
+                qq diff. bet. vector and list? 
+                when we say a List, we talk about doubly linked list.
+                task- constru. a list which contains 2^n show and sort it! vis. it the sorting process!
+                    push_back, push_front 
+                    write a func. names show_list() 
+                    we can call sort on a given list, vec? pp- 
+                list_name.emplace(position, element)
+                    It returns a random access iterator which points to the newly inserted element.
+                we may use auto in this case! 
+                    auto it = lis.emplace(lis.begin(), 2); 
+                 
+        auto 
+            can be used esp. the case of a returned value! 
+            task- declaration a list of pair: int and a char, print them out, loop with keyword auto!     
+
         friend
             A friend class can access private and protected members of other class 
             a LinkedList class may be allowed to access private members of Node
@@ -134,12 +201,15 @@
             
 
         ...
-    book--TeachYourself c++ in one hour a day
-        basic
-            ...
-        oo in c++
-        c++ IO
-        STL lib.
+    online--https://www.geeksforgeeks.org/c-plus-plus/
+        basic 
+            Functions provide abstraction. For example, 
+                we can use library functions without worrying about their internal working.
+            Conclusion is scope resolution operator is for accessing static or class members 
+                and this pointer is for accessing object members when there is a local variable with same name.
+        IO 
+            Tokenizing a string in C++
+        STL lib. - old
             是一套功能强大的 C++ 模板类，提供了通用的模板类和函数，这些模板类和函数
                 可以实现多种流行和常用的算法和数据结构，如向量、链表、队列、栈
             C++ 语言的核心优势之一就是便于软件的重用
@@ -176,12 +246,109 @@
                     3) list 头文件 <list>
                         双向链表，在任何位置增删元素都能在常数时间完成。    
                             不支持随机存取，查询的时候要从头开始。
-        advanced 
+        *STL 
+            https://zh.m.wikibooks.org/wiki/C%2B%2B
+            set
+                each element has to be unique
+                The value of the element cannot be modified once it is added to the set
+                set <int, greater <int> > :: iterator itr; 
+                task- basic usage of a set? 
+                    https://www.geeksforgeeks.org/set-in-cpp-stl/
+            vector, list
+                ...
+            stack, queue, Priority Queue
+                push(g) and pop(), pop() function deletes the first element of the queue.
+                task- push some numbers into queue and write a showq func. that shows the elements of the queue 
+                    https://www.geeksforgeeks.org/queue-cpp-stl/
+                task- use a stack to inverse a list, vector, array? 
+                    https://www.geeksforgeeks.org/stack-in-cpp-stl/
+                Priority queue 
+                    first element of the queue is the greatest of all elements in the queue and elements 
+                        are in non increasing order
+                task- try max heap and min heap with help of Priority queue  x2 
+                    https://www.geeksforgeeks.org/priority-queue-in-cpp-stl/
+                    push and show the state of them!!
+                    hard to rem min heap -- we can multiply values with -1 and use max heap 
+                        to get the effect of min heap! * use this method! 
+                --- variations
+                    Forward list 
+                        implements singly linked list. Introduced from C++11,
+                            simpler version of list? pp- 
+                        It differs from list by the fact that forward list keeps track of location of only next 
+                            element while list keeps track to both next and previous elements.
+                        thus increasing the storage space required to store each element.
+                        The drawback of forward list is that it cannot be iterated backwards 
+                            and its individual elements cannot be accessed directly.
+                        Forward List is preferred over list when only forward traversal is required
+                        *chaining in hashing, adjacency list representation of graph, etc.
+                        std::list 是双向链表，每个成员保持指向下一项与前一项的两个指针，因此可以双向遍历，但消耗内存空间更多，插入或删除成员时的速
+                        forward_list在容器内任意位置的成员的插入、提取（extracting）、移动、删除操作的速度更快，因此被广泛用于排序算法。
+                    Double ended queues are sequence containers with the feature 
+                        of expansion and contraction on both the ends.
+            map 
+                Map in STL is used to hash key and value.
+                We can also use map for pairs.
+                task- use hashing tech to mark the posi. in a (large) Matrix. show where is not marked! 
+                    given a matrix and positions visited, print which positions are not visited.
+                    https://www.geeksforgeeks.org/map-pairs-stl/
+            range based loop 
+                Range-based for loop in C++ is added since C++ 11. It executes a for loop over a range. 
+                Used as a more readable equivalent to the traditional for loop operating
+                in a container* -- that means all containers in stl can be iterated in this way
+                task- Printing string characters, use range based loop ! 
+                    https://www.geeksforgeeks.org/range-based-loop-c/
+            Multisets 
+                are a type of associative containers similar to set, 
+                with an exception that multiple elements can have same values.
+            make_heap()
+                for vectors, make vectors into heaps 
+                using push_heap() to reorder elements 
+                https://www.geeksforgeeks.org/heap-using-stl-c/
+                v1.front() to access the maximum val. in a heap 
+                task- make a vector to heap and show the max. one. then push a val., reorder it! 
+            K-ary heaps 
+                generalization of binary heap(K=2) in which each node have K children instead of 2
+                Max k-ary heap and Min 
+                faster decrease key operation as compared to binary heap
+                https://www.geeksforgeeks.org/k-ary-heap/
     book--c++ primer plus
-        basic 
-        friend 
-        ... 
+        // it was not so hard part, and seems not so interesting -- 耐住性子
+        // what can i learn from such a reading?
+            expressions of besic concepts 
+            accurate know. about the c++ -- it is a basic task! 
+            can occa. use better representation to model a problem when researching 
+            precise! 
+            do not be too detailed -- tasks should be meaningful 
+                eg. ignore: 
+                    File IO: just basic is enough 
+                    history of c++ 
+                    ...
+            list questions that can review c++ anytime you want by reviewing them 
+                and also, the tasks! refine them or re-implement them from time to time! 
+        basic
+            ch02 
+                ...
+            ch03 
+            ch04 
+            ch05 
+            ch06 
+            ch07 
+            ch08 
+            ch09 
+            ch10 
+            ch11 
+            ch12 
+            ch13 
+            ch14 
+            ch15 
+            ch16 
+            ch17
+            ch18 
+            ch19 STL  
+            ... 
     book--xxx
+    book--TeachYourself c++ in one hour a day
+    
     ...
     summerize-theory review 
         +
