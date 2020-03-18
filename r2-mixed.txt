@@ -1,5 +1,9 @@
-
     // 
+        题目肯定是无穷多的， tasks不可估计。但是知识点是有限的。
+            不要被无限多的题目迷惑了双眼，掌握核心知识以后你也可以出题！ 
+        type of tasks: 
+            DS free tasks
+            lan-feature based
         算法是别人或者自己的，那怎么叫熟悉的语言？
             所有小task都可以毫不费力没有参考或者只参考笔记完成
             -这需要训练
@@ -35,7 +39,6 @@
             the right ones, and improve
             bkp
             rewrite and ref. to bkp 
-    //
         code reuse? --> ref. to pieces!
         code judgement? 
             + 
@@ -49,14 +52,21 @@
                 vis it!, plot it out, we can easily judge it! 
                     for graphics 
         A simple and complete C++ program demonstration should be summ. 
-    seed
+        modeling skills also needed! 
+            modeling + coding 
+    seed + Suggested Study Order
+        by default, 5.0 refers to double in c++? y float? n 
+            how to varify this with a code? easy. 
+        N大数据类型？ 
+            char, short, int, long, float, double, long double, bool 
         https://www.geeksforgeeks.org/nested-classes-in-c/
         friend, namespace, make_shared, make_pair, map...
         about the class in c++ 
             by default the access modifier for the members will be Private.
             Protected--can be accessed by any subclass(derived class) of that class.
-            task- show the id in parent, and set it. with Protected modif. 
+            t- show the id in parent, and set it. with Protected modif. 
                 inherit, protected keyword 
+                -task_virtual func
         Inheritance 
             qq types of Inheritance? x5 
             qq does c++ support multiple Inheritance? y 
@@ -73,7 +83,8 @@
                 virtual function, binded at runtime (Runtime polymorphism) 
                 qq to show that we want to overwrite a func. in base class, we have to declear that the func. is virtual? y!
                 虚函数的作用是允许在派生类中重新定义与基类同名的函数
-                task- a base class and a drived class, access two methods, one is virtual and the other not.  
+                t- a base class and a drived class, access two methods, one is virtual and the other not.  
+                    -task_virtual func
         Encapsulation 
             wrapping up of data and information under a single unit.
             Encapsulation is defined as binding together the data and the functions that manipulates them
@@ -108,7 +119,8 @@
         initializer list 
             comma-separated list followed by a colon. 
             Test(int &t):t(t) {}
-            task- write a point class and initialize it with initializer List 
+            t- write a point class and initialize it with initializer List 
+                -task_initialier
         deconstructor 
             A destructor function is called automatically when the object goes out of scope:
                 (1) the function ends
@@ -119,7 +131,8 @@
             The default destructor works fine unless we have dynamically allocated memory or pointer in class.
             When a class contains a pointer to memory allocated in class, we should write a destructor to release 
                 memory before the class instance is destroyed. This must be done to avoid memory leak.
-            task- constru. a string class and write a deconstructor for it! 
+            t- constru. a string class and write a deconstructor for it! 
+                -task_deconstructor
         Copy elision (or Copy omission) 
             a compiler optimization technique avoid too many copy operations 
         The ‘fill’ function in STL 
@@ -150,7 +163,7 @@
                     qq diff. of  emplace_back and push_back? 
                         Well in C++17 will return a reference to element that was just created in the vector where as push_back does not return anythin
                         emplace_back will be more effi. when the case of passing an object such as a string 
-                    task- train them all! maybe in one file
+                    t- train them all! maybe in one file
                         push_back() 
                         pop_back()
                         insert() 
@@ -158,15 +171,17 @@
                         emplace() 
                         emplace_back()
                         swap()
+                            -task_func of vector
             list stru. 
                 Lists are sequence containers that allow non-contiguous memory allocation
                 As compared to vector, list has slow traversal, but once a position has been found, insertion and deletion are quick!
                 qq diff. bet. vector and list? 
                 when we say a List, we talk about doubly linked list.
-                task- constru. a list which contains 2^n show and sort it! vis. it the sorting process!
+                t- constru. a list which contains 2^n show and sort it! vis. it the sorting process!
                     push_back, push_front 
                     write a func. names show_list() 
                     we can call sort on a given list, vec? pp- 
+                        -task_func of list
                 list_name.emplace(position, element)
                     It returns a random access iterator which points to the newly inserted element.
                 we may use auto in this case! 
@@ -174,8 +189,8 @@
                  
         auto 
             can be used esp. the case of a returned value! 
-            task- declaration a list of pair: int and a char, print them out, loop with keyword auto!     
-
+            t- declaration a list of pair: int and a char, print them out, loop with keyword auto!     
+                -
         friend
             A friend class can access private and protected members of other class 
             a LinkedList class may be allowed to access private members of Node
@@ -186,9 +201,10 @@
             friend class B; , means that we can access B in a, "B is my friend, my private vars. 
                 are allowed to be access. by B"
             "allow"
-            task- demo. this friend with classes A and B C, B can access the private vars. 
+            t- demo. this friend with classes A and B C, B can access the private vars. 
                 of A and C, print them out. 
                 in two ways x2 
+                    -task_keyword friend
             *the order of class blocks does matter? y how? 
                 - write *largest classes first(pp- ?) may work
                     smaller ones has private vars.  
@@ -252,24 +268,29 @@
                 each element has to be unique
                 The value of the element cannot be modified once it is added to the set
                 set <int, greater <int> > :: iterator itr; 
-                task- basic usage of a set? 
+                t- basic usage of a set? 
                     https://www.geeksforgeeks.org/set-in-cpp-stl/
+                    -task_basic_set
             vector, list
                 ...
             stack, queue, Priority Queue
                 push(g) and pop(), pop() function deletes the first element of the queue.
-                task- push some numbers into queue and write a showq func. that shows the elements of the queue 
+                t- push some numbers into queue and write a showq func. that shows the 
+                    elements of the queue 
                     https://www.geeksforgeeks.org/queue-cpp-stl/
-                task- use a stack to inverse a list, vector, array? 
+                    -task_basic_queue
+                t- use a stack to inverse a list, vector, array? 
                     https://www.geeksforgeeks.org/stack-in-cpp-stl/
+                    -task_basic_stack
                 Priority queue 
                     first element of the queue is the greatest of all elements in the queue and elements 
                         are in non increasing order
-                task- try max heap and min heap with help of Priority queue  x2 
+                t- try max heap and min heap with help of Priority queue  x2 
                     https://www.geeksforgeeks.org/priority-queue-in-cpp-stl/
                     push and show the state of them!!
                     hard to rem min heap -- we can multiply values with -1 and use max heap 
                         to get the effect of min heap! * use this method! 
+                        -task_maxminheap
                 --- variations
                     Forward list 
                         implements singly linked list. Introduced from C++11,
@@ -288,15 +309,17 @@
             map 
                 Map in STL is used to hash key and value.
                 We can also use map for pairs.
-                task- use hashing tech to mark the posi. in a (large) Matrix. show where is not marked! 
+                t- use hashing tech to mark the posi. in a (large) Matrix. show where is not marked! 
                     given a matrix and positions visited, print which positions are not visited.
                     https://www.geeksforgeeks.org/map-pairs-stl/
+                    -task_hashing task to mark
             range based loop 
                 Range-based for loop in C++ is added since C++ 11. It executes a for loop over a range. 
                 Used as a more readable equivalent to the traditional for loop operating
                 in a container* -- that means all containers in stl can be iterated in this way
-                task- Printing string characters, use range based loop ! 
+                t- Printing string characters, use range based loop ! 
                     https://www.geeksforgeeks.org/range-based-loop-c/
+                    -task_printwithrangebasedloop
             Multisets 
                 are a type of associative containers similar to set, 
                 with an exception that multiple elements can have same values.
@@ -305,13 +328,14 @@
                 using push_heap() to reorder elements 
                 https://www.geeksforgeeks.org/heap-using-stl-c/
                 v1.front() to access the maximum val. in a heap 
-                task- make a vector to heap and show the max. one. then push a val., reorder it! 
+                t- make a vector to heap and show the max. one. then push a val., reorder it! 
+                    -task_make_heap
             K-ary heaps 
                 generalization of binary heap(K=2) in which each node have K children instead of 2
                 Max k-ary heap and Min 
                 faster decrease key operation as compared to binary heap
                 https://www.geeksforgeeks.org/k-ary-heap/
-    book--c++ primer plus
+    book--c++ primer plus --x1days 
         // it was not so hard part, and seems not so interesting -- 耐住性子
         // what can i learn from such a reading?
             expressions of besic concepts 
@@ -348,7 +372,30 @@
             ... 
     book--xxx
     book--TeachYourself c++ in one hour a day
-    
+    book--algorithms--
+        ch01
+        ch02 
+            ...
+        ch03 
+        ch04 
+        ch05 
+        ch06 
+        ch07 
+        ch08 
+        ch09 
+        ch10 
+        ch11 
+        ch12 
+        ch13 
+        ch14 
+        ch15 
+        ch16 
+        ch17
+        ch18 
+        ch19  
+    library--the STL libs, headers <algorithm>! ... 
+        ref. 
+    library--boost 
     ...
     summerize-theory review 
         +
@@ -620,24 +667,166 @@
                 GCC 基于 C，不需要 C++ 编译器即可编译
                 苹果有关
     summerize-small tasks designed:
-        //basic training unit, play with it  
-        Basic
-            sum/multiple/xxx(basic math) two numbers 
-                input: 12 24
-                output: 36
-                check: with calcu. (online is ok)
-            loop over to print numbers/shapes
-                10times 2d loop
-                yanhui triangle 
-                triangle with * 
+        ---lan. spec.
+            mixed
+                t- demostrate map/hash/list/vector/heap... usage!!
+                t- demostrate xxx usage!!
+            File IO
+                read/write file 
                 ...
-        Structure
-            basic bin. tree
-            advanced trees:
-            graph 
-            ...
-        File IO
-            read/write file 
-            ...
-        Network
-            ...
+            Network
+                ... 
+        ---Beginner Exercises online with Suggested Study Order! 
+            //  
+                heuristics: 
+                    部分高中数学题目，尤其是数论有关
+                    poj水题目, or other ojs 
+                    c语言遗产
+                    data sci., basic vis. , img based
+                    search online "basic programming tasks" 
+                        https://www.w3resource.com/cpp-exercises/basic/index.php
+                        ...
+            //
+            old ones:
+                t- sum/multiple/xxx(basic math) two numbers 
+                    input: 12 24
+                    output: 36
+                    check: with calcu. (online is ok)
+                t- loop over to print numbers/shapes
+                    10times 2d loop
+                    yanhui triangle 
+                    triangle with * 
+                    ...
+                t- dsf- jitu tonglong 
+                t- dsf- 水仙花数， xxx数
+            https://www.w3resource.com/cpp-exercises/basic/index.php
+                t- Print the American flag
+                    expected io: clear 
+                t- find the area of Scalene Triangle
+                    expected io:
+                        Input the length of a side of the triangle : 5
+                        Input the length of another side of the triangle : 6
+                        Input the angle between these sides of the triangle : 6
+                        The area of the Scalene Triangle is : 1.56793
+                    n28, https://www.w3resource.com/cpp-exercises/basic/index.php
+                t- convert temperature in Celsius to temperature in Fahrenheit
+                    ref. https://www.w3resource.com/cpp-exercises/basic/index.php   
+                    -
+                t- compute the total and average of four numbers
+                t- show the diff. size of float, double vars. 
+                    size of bool? 
+                    expected: (test cases:)
+                        The sizeof(char) is : 1 bytes
+                        The sizeof(short) is : 2 bytes
+                        The sizeof(int) is : 4 bytes
+                        The sizeof(long) is : 8 bytes
+                        The sizeof(long long) is : 8 bytes
+                        The sizeof(float) is : 4 bytes
+                        The sizeof(double) is : 8 bytes
+                        The sizeof(long double) is : 16 bytes
+                        The sizeof(bool) is : 1 bytes
+                t- check the upper and lower limits of integer.
+                    (use INT_MAX, INT_MIN...) 
+                        The maximum limit of int data type :                  2147483647      
+                        The minimum limit of int data type :                  -2147483648     
+                        The maximum limit of unsigned int data type :         4294967295      
+                        The maximum limit of long long data type :            9223372036854775807                                                                    
+                        The minimum limit of long long data type :             -9223372036854775808                                                                  
+                        The maximum limit of unsigned long long data type :   18446744073709551615                                                                   
+                        The Bits contain in char data type :                  8               
+                        The maximum limit of char data type :                 127             
+                        The minimum limit of char data type :                 -128            
+                        The maximum limit of signed char data type :          127             
+                        The minimum limit of signed char data type :          -128            
+                        The maximum limit of unsigned char data type :        255             
+                        The minimum limit of short data type :                -32768          
+                        The maximum limit of short data type :                32767           
+                        The maximum limit of unsigned short data type :       65535
+                t- find the area of any triangle using Heron's Formula.
+                    Heron's formula states that the area of a triangle whose sides have lengths
+                    semiperimeter of a polygon is half its perimeter
+                    exp:
+                        Input the length of 1st side of the triangle : 5
+                        Input the length of 2nd side of the triangle : 6
+                        Input the length of 3rd side of the triangle : 7
+                        The area of the triangle is : 14.6969
+                t- calculate area of an equilateral triangle
+                    exp:
+                        Input the value of the side of the equilateral triangle: 5
+                        The area of equilateral triangle is: 10.8253
+                t- calcu. the area of a hexagon
+                    io:
+                        Input the side of the hexagon: 6
+                        The area of the hexagon is: 93.5307
+                t- compute the shortest distance between two points on the surface of a sphere
+                    given https://en.wikipedia.org/wiki/Great-circle_distance as ref. 
+                        + radians, the calcu. of arc length d 
+                            what is latitude? be transfered to angle? radiance? 
+                            radians is bet. (0-3.1415... when we have angle bet. 0 to 360? unit circle? )
+                    io:
+                        Input the latitude of coordinate 1: 25
+                        Input the longitude of coordinate 1: 35
+                        Input the latitude of coordinate 2: 35.5
+                        Input the longitude of coordinate 2: 25.5
+                        The distance between those points is: 1480.08
+                t- gen. primes within 1000000 quickly(not using table, hard for coding)
+                    io: clear 
+                t- mem allocation precisely 
+                t- string calculator 
+                    io clear.
+                    ltc. 
+                t- swap all digits of a decimal number 
+                t- from decimal to binary calcu. or, other forms  
+                    ltc.
+                t- swap only two digits, the first and the last 
+                    -> math calcu. 
+                t- string replacement with in a string text 
+                    io clear. 
+                t- find max element in an array with custom comparation func. std::max_ele...
+                    http://www.cplusplus.com/reference/algorithm/max_element/   
+            https://edabit.com/challenges/cpp
+                t- validate a string by checking if there is any space 
+                    hasSpaces("hello") ➞ false
+                    hasSpaces("hello, world") ➞ true
+                    hasSpaces(" ") ➞ true
+                    hasSpaces("") ➞ false
+                    hasSpaces(",./!@#") ➞ false   
+            https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/ leetcode!    
+                restricted, but still, can observe some 
+            DS free tasks from oj! for all lan. (vs lan-feature based)
+        ---oj hierarchy ---x10days 
+            DS based tasks(not only stl)
+                // heuristics:
+                    NP problems(theory review first)
+                    oj 
+                    books 
+                simple-ones, use set, map, 
+                list-based 
+                    t- ...
+                tree-based 
+                    basic bin. tree
+                    advanced trees:
+                    ...
+                graph-based 
+                created_stru-based 
+                t- demostrate xxx DS!!
+            Algo. based 
+                // algo problems?? NP hard? 
+                t- demostrate diff. sorting algos! 
+                t- demostrate xxx algos!
+            -> vis. and interaction with algos. 
+                proj.
+            mixed, competition 
+                huawei 
+                tencent 
+                ...
+            ---
+            reasoning view for triple analysis(graph)
+                ...
+        ---extension 
+            field calculus 
+                // field background first!! 
+                t- demostrate xxx process! (phy, chem, machinary...)
+            -> field vis. and interaction (*center of computer graphics for vis. and inter.)
+                proj. --> will be split into pieces, not basic learning process, not so good but interesting
+    
