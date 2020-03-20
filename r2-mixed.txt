@@ -1,6 +1,9 @@
     // 
+        网上资源其实也不少，但是总觉得不踏实，不系统
         题目肯定是无穷多的， tasks不可估计。但是知识点是有限的。
-            不要被无限多的题目迷惑了双眼，掌握核心知识以后你也可以出题！ 
+            不要被无限多的题目迷惑了双眼，掌握核心知识以后你也可以出题！
+            所以有些题目没有看到也并不遗憾
+            但是还是尽力多做题！整理他们的精华之处！   
         type of tasks: 
             DS free tasks
             lan-feature based
@@ -349,27 +352,126 @@
                     ...
             list questions that can review c++ anytime you want by reviewing them 
                 and also, the tasks! refine them or re-implement them from time to time! 
-        basic
-            ch02 
-                ...
-            ch03 
-            ch04 
-            ch05 
-            ch06 
-            ch07 
-            ch08 
-            ch09 
-            ch10 
-            ch11 
-            ch12 
-            ch13 
-            ch14 
-            ch15 
-            ch16 
-            ch17
-            ch18 
-            ch19 STL  
-            ... 
+        //
+        ch02 (op42-op77 
+            op42 
+            Placing comments in a C++ program
+            Similarly, when you learn a computer language, you should begin by learning
+                the basic structure for a program.
+            it is similar to construct a simple home 
+            an overview of the essential structure of a C++ program and previews some topics
+            cout is a  facility to produce character output
+            C++ is case sensitive
+                it discriminates between uppercase characters and lower case 
+            compiler rejects your offering and accuses you of using unknown identifiers.
+            include s are a PREPROCESSOR directive
+            function header, func. body ! 
+            Program Adjustments
+            you can make the window stay open until you strike a key
+            check the registration link on the back cover for more information
+            back cover 
+            You won’t regret it!
+            uses C++’s input facilities, instead of c's input facilities
+            organize a program into major tasks and then design separate 
+                functions to handle those
+            A function body, delimited by { and }
+            A return statement to terminate the main() function
+            Stripped of the trimmings, we can see the fundamential struc. 
+            function header,and the portion enclosed in braces ({ and })
+                - the portion enclosed in braces is called function body 
+            However, the ISO Standard uses the term “braces.”
+            In C++ each complete instruction is called a statement
+            You must terminate each statement with a semicolon
+            A statement represents an action to be taken
+            The practical upshot is that in  C++ you should never omit 
+                the semicolon.
+            who  can’t put their curiosity on hold
+            a C++ function is activated, or called, by another function
+            The part preceding the function name is called the function return type;
+            The part within the parentheses following the function name
+                is  argument list or parameter list
+            you normally don’t call main() from other parts of your program
+            In effect, the function header describes the interface 
+                between main() and the operating system
+            In this case, the empty parentheses mean that the main() function takes no information
+            qq- what is the  original C style? 
+            Using the keyword void in the parentheses is an explicit way of 
+                saying that the function takes no argument
+            qq- we should not use vois main() style? 
+                should avoid this form and use the C++ Standard form;
+                not part of c++ standard 
+            the implicit return is provided only for main() and not for     
+                any other function.
+            op47 
+            There’s an extremely compelling reason to name a main func. with 
+                main and not the others 
+            Remember, case and spelling count
+            that function must bear the responsibility of being main()
+            execution always begins at the beginning of the main() function
+            qq- what happends if you do not have a main func.? 
+                the compiler points out that you haven’t defined
+            you can write a dynamic link library (DLL) module
+            Because a DLL module is not a standalone program
+            it does nt need a main() func. 
+            some non-standard such as tmain() may exists, 
+                in that case there is a hidden main() that calls _tmain(). 
+                But your ordinary standalone program does need a main();
+            double slash (//) introduces a C++ comment
+            comments are usua. used to explain some aspect of the code
+            qq- As far as the compiler is concerned, what does it looks like? 
+            qq- what kinds of comments are there? x4 
+                c++ style, c style...
+                and /// for document generation 
+            qq- we have to stick to c++ style? 
+                Because it doesn’t involve remembering to correctly pair
+                an end symbol with a begin symbol, it’s less 
+                likely to cause problems    
+            filename extention depends on your C++ system
+            The more complex the program, the more valuable comments are.
+            The GNU compiler is available for many platforms
+            Linux systems most commonly use g++, the GNU C++ compiler from the 
+                Free Software Foundation
+            C comments, which are enclosed between /* and */ symbols
+            (If your compiler doesn’t like these lines, it’s not C++98 compatible
+            It automatically operates when you compile the program
+            This directive causes the preprocessor to add the contents of the iostream file to 
+                your prog. 
+            we need these def. in order to use the cout facility to
+                display a message
+            op49 
+            the original source file is not changed, but goes on to the next stage of compilation.
+            Programs that use cin and cout for input and output must include the iostream file.
+            C++ compilers come with many header files, each supporting a particular family of facilities
+            initially, the header file supporting input and output was named iostream.h
+            Now the h extension is reserved for the old C header files
+            qq- why we not use iostream.h> as include filename? what is the diff. ? 
+            C++ header files have no extension
+            also C header files that have been converted to C++ header files
+                dropping the h extension (making it a C++-style name) and 
+                prefixing the filename with a c (indicating that it comes from C)
+            dropping the h is more than a  cosmetic change, for the h-free header files also incorporate namespaces
+            qq- how to explain the <cmath> header? where does it come? 
+            naming conventions for header files.
+            op50 
+            
+        ch03 
+        ch04 
+        ch05 
+        ch06 
+        ch07 
+        ch08 
+        ch09 
+        ch10 
+        ch11 
+        ch12 
+        ch13 
+        ch14 
+        ch15 
+        ch16 
+        ch17
+        ch18 
+        ch19 STL  
+        ... 
     book--xxx
     book--TeachYourself c++ in one hour a day
     book--algorithms--
