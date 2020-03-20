@@ -497,6 +497,31 @@
             we should keeping the code clean and readable
             A C++ program is a collection of functions,and each function is a collection of statements
             op56 
+            This practice is the usual C convention, but it’s somewhat less common in C++.
+            The next few pages examine this program
+            Computers are precise, orderly machines
+            int is ,a number with no fractional part
+            the size range depends on the implementation.
+            we have to  check for omitted declarations
+            The problem is that if you misspell the name of a variable
+            This kind of error can be hard to trace
+            in c++, compiler catches the error and stomps the potential bug.
+            a declaration need not be a definition, but in this example it is
+            the usual C++ style is to declare a variable just before it is first used.
+                That way, you don’t have to rummage back through a program to see what the type is
+            *The C++ style for declaring variables is to declare a variable as close to its first use as possible.
+            we can can use the assignment operator serially
+            The assignment works from right to left. 
+                we read them as:  88 is assigned to steinway;
+            c++ allows you Without going into the intricacies of printf()
+            *In essence, the C++ insertion operator (<<) adjusts its behavior to fit the type of data
+            to cling to your hard-won mastery of printf()
+            That is, you can redefine the << operator so that cout can recognize and display new data types you develop
+            And if you relish the fine control printf() provides
+            op60 
+            
+                
+            ...
         ch03 
         ch04 
         ch05 
