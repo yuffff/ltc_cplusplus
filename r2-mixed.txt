@@ -56,7 +56,8 @@
                     for graphics 
         A simple and complete C++ program demonstration should be summ. 
         modeling skills also needed! 
-            modeling + coding 
+            modeling + coding
+    ---lan 
     seed + Suggested Study Order
         by default, 5.0 refers to double in c++? y float? n 
             how to varify this with a code? easy. 
@@ -338,7 +339,7 @@
                 Max k-ary heap and Min 
                 faster decrease key operation as compared to binary heap
                 https://www.geeksforgeeks.org/k-ary-heap/
-    book--c++ primer plus --x1days 
+    book--c++ primer plus --x4days 
         // it was not so hard part, and seems not so interesting -- 耐住性子
         // what can i learn from such a reading?
             expressions of besic concepts 
@@ -352,6 +353,9 @@
                     ...
             list questions that can review c++ anytime you want by reviewing them 
                 and also, the tasks! refine them or re-implement them from time to time! 
+            知识点琐碎，描述冗长。主要还是自己一知半解。
+            一知半解的东西最难学：需要足够的耐性，时间。80%是已知的就会觉得很无聊
+            好在主要看英文版的，很多表达我是没有接触过的！实在不行相当于在学英文！ 
         //
         ch02 (op42-op77 
             op42 
@@ -519,7 +523,7 @@
             That is, you can redefine the << operator so that cout can recognize and display new data types you develop
             And if you relish the fine control printf() provides
             op60 
-            
+
                 
             ...
         ch03 
@@ -540,9 +544,10 @@
         ch18 
         ch19 STL  
         ... 
-    book--xxx
     book--TeachYourself c++ in one hour a day
-    book--algorithms--
+    ---algo
+    book--algorithms--算法竞赛入门经典
+        file:///C:/Users/yzy/Desktop/base_c++_oj%20hierarchy/r0-res/chs/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8+%E5%AE%8C%E6%95%B4%E7%89%88.pdf
         ch01
         ch02 
             ...
@@ -555,18 +560,21 @@
         ch09 
         ch10 
         ch11 
-        ch12 
-        ch13 
-        ch14 
-        ch15 
-        ch16 
-        ch17
-        ch18 
-        ch19  
+    book--算法 java描述（学的时候重在理解概念，代码转成c++）（可以考虑从网上搜索相应代码段）
+        file:///C:/Users/yzy/Desktop/base_c++_oj%20hierarchy/r0-res/chs/%E7%AE%97%E6%B3%95(%E7%AC%AC%E5%9B%9B%E7%89%88).pdf
+        ch01
+        ch02 
+            ...
+        ch03 
+        ch04 
+        ch05 
+        ch06
+    book--算法导论
+    ---libs.
     library--the STL libs, headers <algorithm>! ... 
         ref. 
     library--boost 
-    ...
+    ---summ.
     summerize-theory review 
         +
             参考
