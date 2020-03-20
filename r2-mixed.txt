@@ -453,7 +453,50 @@
             qq- how to explain the <cmath> header? where does it come? 
             naming conventions for header files.
             op50 
-            
+            This is called a using directive
+            pre-existing code from several vendors
+            help organize programs
+            Piscine::wanda() could denote Piscine Corporation’s version of wanda()
+            your program could now use the namespaces to discriminate between various versions:
+            classes, functions,and variables that are a standard component are named in a namespace 
+                called std
+            they can do so without a lot of hassle
+            it is prefered to make just particular names available -- detail depends on the existing code 
+                in cgv 
+            using namespace std; // lazy approach, all names available
+            The part enclosed within the double quotation is a string var. 
+            any series of characters enclosed in double quotation marks is called a character string
+            the symbols point the way the information flows
+            You don’t have to know the innards of an object in order to use it.
+            qq- what is the conceptual view of printing a string out? 
+            insertion operator (<<) that inserts the information on its right into the stream
+            rather than say that your program displays a message, you can say that it inserts a string
+                into the output stream.
+            in bkg, this happends by  Operator Overloading
+            the same as bitwise left-shift operator (<<) in c lan 
+            same operator symbol can have different meanings
+            C itself has some operator overloading. For example, the & symbol represents both 
+                the address operator and the bitwise AND operator.
+            The * symbol represents both multiplication and dereferencing a pointer
+            redefine operator meanings for the user-defined types called classes.
+            Inserting endl into the output stream causes the screen cursor to move to the 
+                beginning of the next line
+            to try out these output examples, you have to place them in a complete program
+            qq- we can also use \n to move to the next line? y 
+            more ancient
+            it is considered to be a single character called the newline character
+            most people find the keystrokes for endl to be more comfortable
+            qq- what is the diff. with "\n" and endl? 
+                endl guarantees the output will be flushed (in, this case, immediately displayed onscreen
+            in c++, we can treat the carriage return in the same way as a space
+            This is visually ugly but valid code
+            they are collectively are termed white space
+            qq- why this is invalid? 
+                intmain(); // INVALID, white space omitted
+            An opening brace and a closing brace for a function, each of which is on its own line
+            we should keeping the code clean and readable
+            A C++ program is a collection of functions,and each function is a collection of statements
+            op56 
         ch03 
         ch04 
         ch05 
