@@ -57,954 +57,961 @@
         A simple and complete C++ program demonstration should be summ. 
         modeling skills also needed! 
             modeling + coding
-    ---lan 
-    seed + Suggested Study Order
-        by default, 5.0 refers to double in c++? y float? n 
-            how to varify this with a code? easy. 
-        N大数据类型？ 
-            char, short, int, long, float, double, long double, bool 
-        https://www.geeksforgeeks.org/nested-classes-in-c/
-        friend, namespace, make_shared, make_pair, map...
-        about the class in c++ 
-            by default the access modifier for the members will be Private.
-            Protected--can be accessed by any subclass(derived class) of that class.
-            t- show the id in parent, and set it. with Protected modif. 
-                inherit, protected keyword 
-                -task_virtual func
-        Inheritance 
-            qq types of Inheritance? x5 
-            qq does c++ support multiple Inheritance? y 
-            Hybrid (Virtual) Inheritance
-        Polymorphism 
-            pp- access the child method in parent? 
-            Real life example of polymorphism, a person at the same time can have different characteristic.
-            Compile time Polymorphism  x2 
-                function overloading or operator overloading
-                multiple functions with same name but different parameters
-                change in number of arguments or/and change in type of arguments.
-            Runtime Polymorphism
-                Function overriding on the other hand occurs when a derived class has a definition for one of the member functions of the base class. That base function is said to be overridden
-                virtual function, binded at runtime (Runtime polymorphism) 
-                qq to show that we want to overwrite a func. in base class, we have to declear that the func. is virtual? y!
-                虚函数的作用是允许在派生类中重新定义与基类同名的函数
-                t- a base class and a drived class, access two methods, one is virtual and the other not.  
+    ---c++ lan 
+        seed + Suggested Study Order
+            by default, 5.0 refers to double in c++? y float? n 
+                how to varify this with a code? easy. 
+            N大数据类型？ 
+                char, short, int, long, float, double, long double, bool 
+            https://www.geeksforgeeks.org/nested-classes-in-c/
+            friend, namespace, make_shared, make_pair, map...
+            about the class in c++ 
+                by default the access modifier for the members will be Private.
+                Protected--can be accessed by any subclass(derived class) of that class.
+                t- show the id in parent, and set it. with Protected modif. 
+                    inherit, protected keyword 
                     -task_virtual func
-        Encapsulation 
-            wrapping up of data and information under a single unit.
-            Encapsulation is defined as binding together the data and the functions that manipulates them
-            in a company there are different sections like the accounts section, finance section, sales section etc.
-            Now there may arise a situation when for some reason an official from finance section needs 
-                all the data about sales in a particular month.
-            Encapsulation also lead to data abstraction or hiding
-            Class and access modifiers: getter and setters 
-        Structure vs class in C++
-            A Structure is not secure and cannot hide its implementation details from the end user while a class 
-                is secure and can hide its programming and designing details.
-            Members of a class are private by default and members of a struct are public by default.
-            security issues 
-        qq Can a C++ class have an object of self type?
-            static is fine 
-        qq  static member functions do not have this pointer.? y not related to instance 
-            A static member function can not be declared const
-            The object called by these functions cannot be modified. 
-        Local Classes in C++
-            A local class type name can only be used in the enclosing function. invalid in main()
-            all func. in this method 
-        constructors 
-            Default constructor is the constructor which doesn’t take any argument. It has no parameters.
-            and does not have return val. at the same time 
-            Constructor has same name as the class itself
-            Constructors don’t have return type
-            A constructor is automatically called when an object is created.
-            default constructor expects no parameters and has an empty body
-            qq three typies? 
-            Point p2 = p1; // Copy constructor is called her
-            qq what is a copy constructor? 
-        initializer list 
-            comma-separated list followed by a colon. 
-            Test(int &t):t(t) {}
-            t- write a point class and initialize it with initializer List 
-                -task_initialier
-        deconstructor 
-            A destructor function is called automatically when the object goes out of scope:
-                (1) the function ends
-                (2) the program ends
-                (3) a block containing local variables ends
-                (4) a delete operator is called 
-            qq Can there be more than one destructor in a class? n 
-            The default destructor works fine unless we have dynamically allocated memory or pointer in class.
-            When a class contains a pointer to memory allocated in class, we should write a destructor to release 
-                memory before the class instance is destroyed. This must be done to avoid memory leak.
-            t- constru. a string class and write a deconstructor for it! 
-                -task_deconstructor
-        Copy elision (or Copy omission) 
-            a compiler optimization technique avoid too many copy operations 
-        The ‘fill’ function in STL 
-            assigns the value ‘val’ to all the elements in the range [begin, end)
-        c++ stl 
-            c++ vector loop! 
-                Vectors are same as dynamic arrays with the ability to resize itself automaticall
-                Vector elements are placed in contiguous storage so that they can be 
-                    accessed and traversed using iterators
-                lots of functions! 
-                    https://www.geeksforgeeks.org/vector-in-cpp-stl/
-                    Iterators 
-                        begin(),end()... 
-                    Capacity
-                        reserve() – Requests that the vector capacity be at least enough to contain n elements.
-                    Element access:
-                        at() 
-                        front() ... back()... 
-                    *Modifiers! train them all! maybe in one file
-                        push_back() 
-                        pop_back()
-                        insert() 
-                        erase() 
-                        emplace() 
-                        emplace_back()
-                        swap()
-                        ...
-                    qq diff. of  emplace_back and push_back? 
-                        Well in C++17 will return a reference to element that was just created in the vector where as push_back does not return anythin
-                        emplace_back will be more effi. when the case of passing an object such as a string 
-                    t- train them all! maybe in one file
-                        push_back() 
-                        pop_back()
-                        insert() 
-                        erase() 
-                        emplace() 
-                        emplace_back()
-                        swap()
-                            -task_func of vector
-            list stru. 
-                Lists are sequence containers that allow non-contiguous memory allocation
-                As compared to vector, list has slow traversal, but once a position has been found, insertion and deletion are quick!
-                qq diff. bet. vector and list? 
-                when we say a List, we talk about doubly linked list.
-                t- constru. a list which contains 2^n show and sort it! vis. it the sorting process!
-                    push_back, push_front 
-                    write a func. names show_list() 
-                    we can call sort on a given list, vec? pp- 
-                        -task_func of list
-                list_name.emplace(position, element)
-                    It returns a random access iterator which points to the newly inserted element.
-                we may use auto in this case! 
-                    auto it = lis.emplace(lis.begin(), 2); 
-                 
-        auto 
-            can be used esp. the case of a returned value! 
-            t- declaration a list of pair: int and a char, print them out, loop with keyword auto!     
-                -
-        friend
-            A friend class can access private and protected members of other class 
-            a LinkedList class may be allowed to access private members of Node
-            use case? LinkedList, Node 
-            Friends should be used only for limited purpose.
-                it lessens the value of encapsulation of separate classes in object-oriented programming.
-            Friendship is not mutual.not inherited
-            friend class B; , means that we can access B in a, "B is my friend, my private vars. 
-                are allowed to be access. by B"
-            "allow"
-            t- demo. this friend with classes A and B C, B can access the private vars. 
-                of A and C, print them out. 
-                in two ways x2 
-                    -task_keyword friend
-            *the order of class blocks does matter? y how? 
-                - write *largest classes first(pp- ?) may work
-                    smaller ones has private vars.  
-                - we have to follow the order of *header files and their imp. 
-                    // cpp file below: (logically)
-        Nested Classes
-            nested class can access private members of Enclosing class, and not true the conter case 
-        
-            
-            
-
-        ...
-    online--https://www.geeksforgeeks.org/c-plus-plus/
-        basic 
-            Functions provide abstraction. For example, 
-                we can use library functions without worrying about their internal working.
-            Conclusion is scope resolution operator is for accessing static or class members 
-                and this pointer is for accessing object members when there is a local variable with same name.
-        IO 
-            Tokenizing a string in C++
-        STL lib. - old
-            是一套功能强大的 C++ 模板类，提供了通用的模板类和函数，这些模板类和函数
-                可以实现多种流行和常用的算法和数据结构，如向量、链表、队列、栈
-            C++ 语言的核心优势之一就是便于软件的重用
-            标准模板库 (Standard Template Library)就是一些常用
-                数据结构和算法的模板的集合。主要由 Alex Stepanov开发，
-                于1998年被添加进C++标准
-            相对的，每个人都该实现一下自己的算法库
-                首先，可以提供新的研究成果，近似算法xxx
-                其次，方便理解，别人写的你总归是不理解的！
-            有了STL，不必再从头写大多的标准数据结构和算法，并且可获得非常高的性能。
-            核心：容器，迭代器，算法
-            容器：可容纳各种数据类型的数据结构。
-                1) 顺序容器
-                    vector：后部插入/删除，直接访问
-                    deque：前/后部插入/删除，直接访问
-                    list：双向链表，任意位置插入/删除
-                2)关联容器
-                    set：快速查找，无重复元素
-                    multiset ：快速查找，可有重复元素
-                    map：一对一映射，无重复元素，基于关键字查找
-                    multimap ：一对一映射，可有重复元素，基于关键字查找前2者合称为第一类容器
-                3)容器适配器
-                    stack： LIFO
-                    queue： FIFO
-                    priority_queue：优先级高的元素先出容器概述
-            
-                头文件
-                    1) vector 头文件 <vector>
-                        实际上就是个动态数组。随机存取任何元素都能在常数时间完成。
-                            在尾端增删元素具有较佳的性能。
-                    2) deque 头文件 <deque>
-                        也是个动态数组，随机存取任何元素都能在常数时间完成(但性能次于vector)。
-                            在两端增删元素具有较佳的性能。
-                    3) list 头文件 <list>
-                        双向链表，在任何位置增删元素都能在常数时间完成。    
-                            不支持随机存取，查询的时候要从头开始。
-        *STL 
-            https://zh.m.wikibooks.org/wiki/C%2B%2B
-            set
-                each element has to be unique
-                The value of the element cannot be modified once it is added to the set
-                set <int, greater <int> > :: iterator itr; 
-                t- basic usage of a set? 
-                    https://www.geeksforgeeks.org/set-in-cpp-stl/
-                    -task_basic_set
-            vector, list
-                ...
-            stack, queue, Priority Queue
-                push(g) and pop(), pop() function deletes the first element of the queue.
-                t- push some numbers into queue and write a showq func. that shows the 
-                    elements of the queue 
-                    https://www.geeksforgeeks.org/queue-cpp-stl/
-                    -task_basic_queue
-                t- use a stack to inverse a list, vector, array? 
-                    https://www.geeksforgeeks.org/stack-in-cpp-stl/
-                    -task_basic_stack
-                Priority queue 
-                    first element of the queue is the greatest of all elements in the queue and elements 
-                        are in non increasing order
-                t- try max heap and min heap with help of Priority queue  x2 
-                    https://www.geeksforgeeks.org/priority-queue-in-cpp-stl/
-                    push and show the state of them!!
-                    hard to rem min heap -- we can multiply values with -1 and use max heap 
-                        to get the effect of min heap! * use this method! 
-                        -task_maxminheap
-                --- variations
-                    Forward list 
-                        implements singly linked list. Introduced from C++11,
-                            simpler version of list? pp- 
-                        It differs from list by the fact that forward list keeps track of location of only next 
-                            element while list keeps track to both next and previous elements.
-                        thus increasing the storage space required to store each element.
-                        The drawback of forward list is that it cannot be iterated backwards 
-                            and its individual elements cannot be accessed directly.
-                        Forward List is preferred over list when only forward traversal is required
-                        *chaining in hashing, adjacency list representation of graph, etc.
-                        std::list 是双向链表，每个成员保持指向下一项与前一项的两个指针，因此可以双向遍历，但消耗内存空间更多，插入或删除成员时的速
-                        forward_list在容器内任意位置的成员的插入、提取（extracting）、移动、删除操作的速度更快，因此被广泛用于排序算法。
-                    Double ended queues are sequence containers with the feature 
-                        of expansion and contraction on both the ends.
-            map 
-                Map in STL is used to hash key and value.
-                We can also use map for pairs.
-                t- use hashing tech to mark the posi. in a (large) Matrix. show where is not marked! 
-                    given a matrix and positions visited, print which positions are not visited.
-                    https://www.geeksforgeeks.org/map-pairs-stl/
-                    -task_hashing task to mark
-            range based loop 
-                Range-based for loop in C++ is added since C++ 11. It executes a for loop over a range. 
-                Used as a more readable equivalent to the traditional for loop operating
-                in a container* -- that means all containers in stl can be iterated in this way
-                t- Printing string characters, use range based loop ! 
-                    https://www.geeksforgeeks.org/range-based-loop-c/
-                    -task_printwithrangebasedloop
-            Multisets 
-                are a type of associative containers similar to set, 
-                with an exception that multiple elements can have same values.
-            make_heap()
-                for vectors, make vectors into heaps 
-                using push_heap() to reorder elements 
-                https://www.geeksforgeeks.org/heap-using-stl-c/
-                v1.front() to access the maximum val. in a heap 
-                t- make a vector to heap and show the max. one. then push a val., reorder it! 
-                    -task_make_heap
-            K-ary heaps 
-                generalization of binary heap(K=2) in which each node have K children instead of 2
-                Max k-ary heap and Min 
-                faster decrease key operation as compared to binary heap
-                https://www.geeksforgeeks.org/k-ary-heap/
-    book--c++ primer plus --x4days 
-        // it was not so hard part, and seems not so interesting -- 耐住性子
-        // what can i learn from such a reading?
-            expressions of besic concepts 
-            accurate know. about the c++ -- it is a basic task! 
-            can occa. use better representation to model a problem when researching 
-            precise! 
-            do not be too detailed -- tasks should be meaningful 
-                eg. ignore: 
-                    File IO: just basic is enough 
-                    history of c++ 
-                    ...
-            list questions that can review c++ anytime you want by reviewing them 
-                and also, the tasks! refine them or re-implement them from time to time! 
-            知识点琐碎，描述冗长。主要还是自己一知半解。
-            一知半解的东西最难学：需要足够的耐性，时间。80%是已知的就会觉得很无聊
-            好在主要看英文版的，很多表达我是没有接触过的！实在不行相当于在学英文！ 
-        //
-        ch02 (op42-op77 
-            op42 
-            Placing comments in a C++ program
-            Similarly, when you learn a computer language, you should begin by learning
-                the basic structure for a program.
-            it is similar to construct a simple home 
-            an overview of the essential structure of a C++ program and previews some topics
-            cout is a  facility to produce character output
-            C++ is case sensitive
-                it discriminates between uppercase characters and lower case 
-            compiler rejects your offering and accuses you of using unknown identifiers.
-            include s are a PREPROCESSOR directive
-            function header, func. body ! 
-            Program Adjustments
-            you can make the window stay open until you strike a key
-            check the registration link on the back cover for more information
-            back cover 
-            You won’t regret it!
-            uses C++’s input facilities, instead of c's input facilities
-            organize a program into major tasks and then design separate 
-                functions to handle those
-            A function body, delimited by { and }
-            A return statement to terminate the main() function
-            Stripped of the trimmings, we can see the fundamential struc. 
-            function header,and the portion enclosed in braces ({ and })
-                - the portion enclosed in braces is called function body 
-            However, the ISO Standard uses the term “braces.”
-            In C++ each complete instruction is called a statement
-            You must terminate each statement with a semicolon
-            A statement represents an action to be taken
-            The practical upshot is that in  C++ you should never omit 
-                the semicolon.
-            who  can’t put their curiosity on hold
-            a C++ function is activated, or called, by another function
-            The part preceding the function name is called the function return type;
-            The part within the parentheses following the function name
-                is  argument list or parameter list
-            you normally don’t call main() from other parts of your program
-            In effect, the function header describes the interface 
-                between main() and the operating system
-            In this case, the empty parentheses mean that the main() function takes no information
-            qq- what is the  original C style? 
-            Using the keyword void in the parentheses is an explicit way of 
-                saying that the function takes no argument
-            qq- we should not use vois main() style? 
-                should avoid this form and use the C++ Standard form;
-                not part of c++ standard 
-            the implicit return is provided only for main() and not for     
-                any other function.
-            op47 
-            There’s an extremely compelling reason to name a main func. with 
-                main and not the others 
-            Remember, case and spelling count
-            that function must bear the responsibility of being main()
-            execution always begins at the beginning of the main() function
-            qq- what happends if you do not have a main func.? 
-                the compiler points out that you haven’t defined
-            you can write a dynamic link library (DLL) module
-            Because a DLL module is not a standalone program
-            it does nt need a main() func. 
-            some non-standard such as tmain() may exists, 
-                in that case there is a hidden main() that calls _tmain(). 
-                But your ordinary standalone program does need a main();
-            double slash (//) introduces a C++ comment
-            comments are usua. used to explain some aspect of the code
-            qq- As far as the compiler is concerned, what does it looks like? 
-            qq- what kinds of comments are there? x4 
-                c++ style, c style...
-                and /// for document generation 
-            qq- we have to stick to c++ style? 
-                Because it doesn’t involve remembering to correctly pair
-                an end symbol with a begin symbol, it’s less 
-                likely to cause problems    
-            filename extention depends on your C++ system
-            The more complex the program, the more valuable comments are.
-            The GNU compiler is available for many platforms
-            Linux systems most commonly use g++, the GNU C++ compiler from the 
-                Free Software Foundation
-            C comments, which are enclosed between /* and */ symbols
-            (If your compiler doesn’t like these lines, it’s not C++98 compatible
-            It automatically operates when you compile the program
-            This directive causes the preprocessor to add the contents of the iostream file to 
-                your prog. 
-            we need these def. in order to use the cout facility to
-                display a message
-            op49 
-            the original source file is not changed, but goes on to the next stage of compilation.
-            Programs that use cin and cout for input and output must include the iostream file.
-            C++ compilers come with many header files, each supporting a particular family of facilities
-            initially, the header file supporting input and output was named iostream.h
-            Now the h extension is reserved for the old C header files
-            qq- why we not use iostream.h> as include filename? what is the diff. ? 
-            C++ header files have no extension
-            also C header files that have been converted to C++ header files
-                dropping the h extension (making it a C++-style name) and 
-                prefixing the filename with a c (indicating that it comes from C)
-            dropping the h is more than a  cosmetic change, for the h-free header files also incorporate namespaces
-            qq- how to explain the <cmath> header? where does it come? 
-            naming conventions for header files.
-            op50 
-            This is called a using directive
-            pre-existing code from several vendors
-            help organize programs
-            Piscine::wanda() could denote Piscine Corporation’s version of wanda()
-            your program could now use the namespaces to discriminate between various versions:
-            classes, functions,and variables that are a standard component are named in a namespace 
-                called std
-            they can do so without a lot of hassle
-            it is prefered to make just particular names available -- detail depends on the existing code 
-                in cgv 
-            using namespace std; // lazy approach, all names available
-            The part enclosed within the double quotation is a string var. 
-            any series of characters enclosed in double quotation marks is called a character string
-            the symbols point the way the information flows
-            You don’t have to know the innards of an object in order to use it.
-            qq- what is the conceptual view of printing a string out? 
-            insertion operator (<<) that inserts the information on its right into the stream
-            rather than say that your program displays a message, you can say that it inserts a string
-                into the output stream.
-            in bkg, this happends by  Operator Overloading
-            the same as bitwise left-shift operator (<<) in c lan 
-            same operator symbol can have different meanings
-            C itself has some operator overloading. For example, the & symbol represents both 
-                the address operator and the bitwise AND operator.
-            The * symbol represents both multiplication and dereferencing a pointer
-            redefine operator meanings for the user-defined types called classes.
-            Inserting endl into the output stream causes the screen cursor to move to the 
-                beginning of the next line
-            to try out these output examples, you have to place them in a complete program
-            qq- we can also use \n to move to the next line? y 
-            more ancient
-            it is considered to be a single character called the newline character
-            most people find the keystrokes for endl to be more comfortable
-            qq- what is the diff. with "\n" and endl? 
-                endl guarantees the output will be flushed (in, this case, immediately displayed onscreen
-            in c++, we can treat the carriage return in the same way as a space
-            This is visually ugly but valid code
-            they are collectively are termed white space
-            qq- why this is invalid? 
-                intmain(); // INVALID, white space omitted
-            An opening brace and a closing brace for a function, each of which is on its own line
-            we should keeping the code clean and readable
-            A C++ program is a collection of functions,and each function is a collection of statements
-            op56 
-            This practice is the usual C convention, but it’s somewhat less common in C++.
-            The next few pages examine this program
-            Computers are precise, orderly machines
-            int is ,a number with no fractional part
-            the size range depends on the implementation.
-            we have to  check for omitted declarations
-            The problem is that if you misspell the name of a variable
-            This kind of error can be hard to trace
-            in c++, compiler catches the error and stomps the potential bug.
-            a declaration need not be a definition, but in this example it is
-            the usual C++ style is to declare a variable just before it is first used.
-                That way, you don’t have to rummage back through a program to see what the type is
-            *The C++ style for declaring variables is to declare a variable as close to its first use as possible.
-            we can can use the assignment operator serially
-            The assignment works from right to left. 
-                we read them as:  88 is assigned to steinway;
-            c++ allows you Without going into the intricacies of printf()
-            *In essence, the C++ insertion operator (<<) adjusts its behavior to fit the type of data
-            to cling to your hard-won mastery of printf()
-            That is, you can redefine the << operator so that cout can recognize and display new data types you develop
-            And if you relish the fine control printf() provides
-            op60 
-
-                
-            ...
-        ch03 
-        ch04 
-        ch05 
-        ch06 
-        ch07 
-        ch08 
-        ch09 
-        ch10 
-        ch11 
-        ch12 
-        ch13 
-        ch14 
-        ch15 
-        ch16 
-        ch17
-        ch18 
-        ch19 STL  
-        ... 
-    book--TeachYourself c++ in one hour a day
-    ---algo
-    book--algorithms--算法竞赛入门经典
-        file:///C:/Users/yzy/Desktop/base_c++_oj%20hierarchy/r0-res/chs/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8+%E5%AE%8C%E6%95%B4%E7%89%88.pdf
-        ch01
-        ch02 
-            ...
-        ch03 
-        ch04 
-        ch05 
-        ch06 
-        ch07 
-        ch08 
-        ch09 
-        ch10 
-        ch11 
-    book--算法 java描述（学的时候重在理解概念，代码转成c++）（可以考虑从网上搜索相应代码段）
-        file:///C:/Users/yzy/Desktop/base_c++_oj%20hierarchy/r0-res/chs/%E7%AE%97%E6%B3%95(%E7%AC%AC%E5%9B%9B%E7%89%88).pdf
-        ch01
-        ch02 
-            ...
-        ch03 
-        ch04 
-        ch05 
-        ch06
-    book--算法导论
-    ---libs.
-    library--the STL libs, headers <algorithm>! ... 
-        ref. 
-    library--boost 
-    ---summ.
-    summerize-theory review 
-        +
-            参考
-                http://www.runoob.com/cplusplus/cpp-comments.html
-            概述	
-                编译语言与解释语言
-                最经典的编译语言是c，最经典的解释语言是Ruby
-                解释语言效率未必就低于编译语言，可以通过加强解释器来实现解释语言执行的优化
-                相比matlab，具有开源优势
-                相比java与c这种强类型语言，具有更好
-                强类型语言与弱类型语言
-                    弱类型的语言的东西没有明显的类型,他能随着环境的不同,自动变换类型，比如vbs、javascript语言。变量声明比较简单，仅仅是var就可以解决。
-                    强类型比如java、c
-                强类型语言实现数学操作比较费劲
-                编译器
-                    mingw是gcc 的windows的移植版  
-                    mingw支持win32API 单一编译器可以支持多个API 
-                    主函数加载  变量声明 以及函数调用是受API说明 以及编译器支持的   
-                    mingw  gcc编译器支持win32API    
-                    c51   单片机编译器支持  c51API
-                    gcc的各种版本：mingw
-        //
-            快速复习，’说破而不戳破‘
-            把概念高度概括，起码自己再看的时候知道怎么回事，直接就可以写代码
-            题目--笔记--code
-                不到万不得已不要看code，争取自己可以做出来 
-                笔记相当于一种有效快速的提示（网上的东西杂乱）
-                
-        =======================语言基础=====================
-            基本环境：引入iostream，其中定义了一些标准对象，使用std命名空间 打印hello &
-            数据类型表达式
-                七种基本的 C++ 数据类型(小写)
-                    int 
-                    float double
-                    char
-                    bool
-                用大括号括起来是语句块
-                C++ 是区分大小写的编程语言，Manpower 和 manpower 是两个不同的标识符。
-                保留字不能作为常量名、变量名或其他标识符名称
-                三字符组就是用于表示另一个字符的三个字符序列，用来表示特殊字符
-                注释快捷键（VS2013）
-                    注释Ctrl+K+C
-                    取消Ctrl+K+U
-                块注释符（/*...*/）是不可以嵌套使用的。
-                使用 typedef 为一个已有的类型取一个新的名字 &
-                    typedef int feet;feet distance;
-                枚举类型(enumeration)是C++中的一种派生数据类型
-                    enum color { red, green, blue } c;
-                    枚举名color，red标识符，c枚举常量
-                    默认情况下，第一个名称的值为 0，第二个名称的值为 1，第三个名称的值为 2
-                    也可以给名称赋予一个特殊的值，只需要添加一个初始值即可。例如，在下面的枚举中，green 的值为 5。
-                    enum color { red, green=5, blue };
-                    在这里，blue 的值为 6，因为默认情况下，每个名称都会比它前面一个名称大 1，但 red 的值依然为 0。
-                float 23位小数。double，52位小数
-                ***不带初始化的定义：
-                    带有静态存储持续时间的变量会被隐式初始化为 NULL（所有字节的值都是 0），其他所有变量的初始值是未定义的。
-                指向内存位置的表达式被称为左值表达式（lvalue）。
-                右值是不能对其进行赋值的表达式，也就是说，右值可以出现在赋值号的右边，但不能出现在赋值号的左边。
-                变量是左值，因此可以出现在赋值号的左边
-                ***义全局变量时，系统会自动初始化！，为0值：
-                定义一个无符号长整数 &
-                定义一个浮点数常量，计算长度 &
-                    314159E-5L 
-                空格可以分割字符串 &
-                使用 #define 预处理器定义常量 &（最好是大写字母）
-                有符号整数和无符号整数使用范围是不同的，输入一个正数，有符号整数可能解释为负数 50000 int &
-                自己的类定义
-                    class 开头，后跟类的名称。类的主体是包含在一对花括号中。类定义后必须跟着一个分号或一个声明列表
-                    定义一个Box类，写get set方法，使用标准的定义过程，加上构造函数 &
-                    构造函数
-                        构造函数的名称与类的名称是完全相同的，并且不会返回任何类型，也不会返回 void ！
-                        初始化列表来初始化字段
-                        类成员函数或者构造函数定义的时候可以无歧义的直接使用成员变量名
-                        应该是public 的
-                        在main中使用时（两种都可以） &
-                            不用new关键字：自动在栈中为每个变量开辟内存空间
-                            使用new：在堆中创建，默认调用构造方法（动态内存）
-                    成员属性
-                        默认情况下，类的所有成员都是私有的
-                        保护成员在派生类（即子类）中是可访问的
-                        有public, protected, private三种继承方式，它们相应地改变了基类成员的访问属性。
-                    公共数据成员可以使用直接成员访问运算符 (.) 来访问
-                    类定义内部仅仅进行成员函数声明，方便管理，声明就是一个函数头，没有函数体
-                    类方法最好使用范围解析运算符 :: 来定义，在类定义外部
-                    有元 *
-                        有元函数可以不通过类名直接调用，但是没有this指针
-                    内联函数 
-                        比较大小的内联函数 &
-                        如果已定义的函数多于10行，编译器会忽略 inline 限定符。
-                        加快调用速度
-                        实质是空间换时间
-                            程序在编译器编译的时候，编译器将程序中出现的内联函数的调用表达式用内联函数的函数体进行替换，
-                            而对于其他的函数，都是在运行时候才被替代。这其实就是个空间代价换时间的i节省。
-                    this指针
-                        每一个对象都能通过 this 指针来访问自己的地址 *
-                        因为友元不是类的成员。只有成员函数才有 this 指针。
-                    指向类的指针
-                        一个指向 C++ 类的指针与指向结构的指针类似
-                        动态计算Box1 2的体积 &
-                    类的静态成员
-                        这意味着无论创建多少个类的对象，静态成员都只有一个副本。
-                        实现一个类实例的计数器 &（每次构造的时候加1）
-                数组 
-                    个数是固定的，为了效率
-                    数组名可以直接用于指针运算
-                    生成 10 个随机数，并使用数组来返回它们 &
-                    数组地址传给函数，生成数组序列 &
-                    字符串
-                        C++ 编译器会在初始化数组时，自动把 '\0' 放在字符串的末尾
-                        各种字符串操作: &
-                            strcpy
-                            strcat
-                            strlen
-                            strcmp
-                            strchr
-                        String类型|：
-                            C++ 标准库提供了 string 类类型，支持上述所有的操作，另外还增加了其他更多的功能。
-                指针类型
-                    动态内存分配，没有指针是无法执行的
-                    连字号（&）运算符访问的地址，取地址操作
-                    *是取值操作
-                    注意区分指针的声明和使用
-                    指针的实际数据类型是 是一个代表内存地址的长的十六进制数
-                    指针可以用来指向一个真实的变量地址，用来取变量的数值，传值等操作
-                    数组指针：指向数组开头的常量，不能作为左值
-                        本身不可以变，但是取值之后的数值是可以变得
-                    构造一个数组，把 var[2] 赋值为 500 &
-                引用类型
-                    引用变量是一个别名，也就是说，它是某个已存在变量的另一个名字
-                    引用必须在创建时被初始化。指针可以在任何时间被初始化。
-                    把引用当成是变量附属在内存位置中的第二个标签
-                    引用就是取别名，直接操作就可以
-                    主要应用
-                        函数参数
-                            交换两个int类型的数据 &
-                        把引用作为返回值
-                            不能返回局部变量的引用
-                            可以出现在赋值语句左边，
-                            写一个数组，改变数组中i位的数值 &
-                结构类型
-                    结构是 C++ 中另一种用户自定义的可用的数据类型，同c语言中
-            时间运算
-                C++ 标准库没有提供所谓的日期类型。C++ 继承了 C 语言用于日期和时间操作的结构和函数
-                引入ctime，而后可以调用time函数 输出秒数&
-                输出格式化的日期时间 &
-                    strftime()函数
-
-            数学运算
-                引用数学头文件 <cmath>
-                sin cos等静态函数操作 &
-            函数
-                在函数声明时，最好提供一个函数名在main之前，而函数的实际定义则可以在任何地方进行
-                返回两个数字中较大的数 &
-                通过引用调用处理一个数组 &
-                Lambda 函数与表达式
-                    增加可读性？一般不用
-                实现汉诺塔 &
-            控制语句
-                循环分支for while if
-                输出上下三角 &
-                九九乘法表 &
-            输入输出
-                cout<<"string"<<endl，endl是换行符
-                cin<<变量名；
-                流提取运算符 >> 在一个语句中可以多次使用，如果要求输入多个数据，可以使用如下语句：
-
-                scanf("%d",&x);传地址
-                printf("%d",x);传数值
-            刷ACM题目 &&
-            命名空间
-                定义命名空间 &
-                using 指令
-                嵌套的命名空间
-        =======================深入API（实现各种算法应用）===================
-            文件操作（最具有c++特色的用法）
-                先写入文件，再读入 & ASCII 二进制模式的话要加上binary属性
-                IOS是流式I/O的基类
-                ios::in ios::out定义打开文件的属性
-                写入文件
-                    通用法 fstream
-                    专用法 ofstream---in file stream 输入文件流
-                            初始化的时候默认调用open函数
-                            在这里您使用的是 ofstream 或 fstream 对象，而不是 cout 对象。
-                读取文件
-                    通用法 fstream
-                    专用 ifstream
-                        在这里您使用的是 ifstream 或 fstream 对象，而不是 cin 对象。
-                        读取一行数据 &，使用ifstream中的getline函数，返回的数据在参数中（参数就是把一个buff）
-                通用法打开文件要加上属性，看起来整齐
-                推荐使用专用法
-                而后就可以用cin cout来操作了
-                文件对象别忘了关闭
-            多线程
-                使用pthread开源库 &
-                    1.库文件直接放在项目中，引入include等目录
-                    2.放置dll文件在cpp文件夹中
-                    3.引用lib文件#pragma comment(lib, "pthreadVC2.lib")
-            c++ STL库
-                模板类和函数可以实现多种流行和常用的算法和数据结构，如向量、链表、队列、栈
-                容器（Containers），算法（Algorithms），迭代器（iterators）
-                定义：向量容器<类型> 名称；
-                调用：名称.算法；
-                迭代器相当于指针，进行遍历的工具；
-                动态创建数组，并输出所有元素，显示大小 &
-                push_back( ) 成员函数在向量的末尾插入值，如果有必要会扩展向量的大小。
-                begin( ) 函数返回一个指向向量开头的迭代器。
-                size( ) 函数显示向量的大小。
-                C++ 标准库包含了所有的 C 标准库，为了支持类型安全，做了一定的添加和修改
-                标准的 C++ 面向对象类库定义了大量支持一些常见操作的类，比如输入/输出 I/O、字符串处理、数值处理
-            GUI操作
-                QT
-                    概述
-                        不用跨平台：因为商业需要只能硬着头皮维护下去，浪费了公司大量的人力财力
-                        国内公司只是市场驱动的，它们不是真正技术驱动的公司，
-                            很多软件都是用开源改后包装成自己的，依靠垄断存活的
-                        QT你不能说他不流行吧, WPS, Wirshark, KDE, dropbox, skype, virtualbox都和qt有关吧, 你想写个跨平台的C++程序, QT是个不错的选择,
-                        如果是创业型小公司想开发适配自己公司产品的配套软件并想支持多平台那么Qt是不二的选择。
-                            想在4个平台开发软件假设工作量是4，那么用qt可以达到2.5左右。总体工作量减少
-                        在桌面Linux和嵌入式领域是主流地位
-                        环境搭建https://www.cnblogs.com/happykoukou/p/7457013.html &
-                    显示
-                    组件
-                    附加组件
-                    应用
-                        本地 &
-                            界面类：计算器，登陆界面，图书馆系统
-                            文档媒体：图片处理，文件名处理工具
-                            游戏：俄罗斯方块，扫雷
-                        网络 &
-                            http下载器
-                            ftp查看器
-                            网络发包ping
-            延时
-                引入windows头文件，而后可以利用其中的Sleep函数进行延时，单位是毫秒 &
-            网络
-                虽然 CGI 文件是 C++ 可执行文件，但是按照惯例它的扩展名是 .cgi
-                Apache Web 服务器会配置在 /var/www/cgi-bin 中运行 CGI 程序
-                请使用 chmod 755 cplusplus.cgi UNIX 命令来修改文件模式，确保文件可执行。访问可执行文件
-                GET 和 POST 方法 &
-                获取 Cookies
-                文件上传实例
-            数据库
-        =======================超越API（实现自己的代码库）===================
-            注意项目封装
-            数值计算的库操作数组
-                eigen库
-                    就是一个头文件与一些实现！！
-                    重写了一些操作符号，规范
-                    矩阵操作，特别是二维矩阵
-                    矩阵的乘除加减求逆求行列式
-                    Eigen速度最快，与自己定义数组的操作效率相当
-                    矩阵存储等有优化
-                    All classes and functions defined in this header file 
-                        (and other Eigen header files) are in the Eigen namespace！
-                    helloworld程序，添加一个矩阵 &
-                    随机生成矩阵+矩阵乘法运算 &
-            OpenGL库
-            OpenCV库
-        =======================根据工作要求=======================
-            GDB和LLDB
-                他们两个都是调试用的Debugger，只是LLDB是比较高级的版本，或者在调试开发iOS应用时比较好用，不然人家苹果为什么换成了LLDB了呢！
-            GCC/Clang（LLVM库）
-                它是一套以 GPL 及 LGPL 许可证所发行的自由软件，也是 GNU计划的关键部分
-                GCC 原名为 GNU C 语言编译器，因为它原本只能处理 C语言。GCC 很快地扩展，变得可处理 C++
-                LLVM 是 Low Level Virtual Machine 的简称，这个库提供了与编译器相关的支持，能够进行程序语言的编译期优化、链接优化、在线编译优化、代码生成
-                Clang发布于 LLVM BSD 许可证下的 C/C++/Objective C/Objective C++ 编译器，其目标（之一）就是超越 GCC。
-                但Apple对编译工具会提出更高的要求。
-                GCC 基于 C，不需要 C++ 编译器即可编译
-                苹果有关
-    summerize-small tasks designed:
-        ---lan. spec.
-            mixed
-                t- demostrate map/hash/list/vector/heap... usage!!
-                t- demostrate xxx usage!!
-            File IO
-                read/write file 
-                ...
-            Network
-                ... 
-        ---Beginner Exercises online with Suggested Study Order! 
-            //  
-                heuristics: 
-                    部分高中数学题目，尤其是数论有关
-                    poj水题目, or other ojs 
-                    c语言遗产
-                    data sci., basic vis. , img based
-                    search online "basic programming tasks" 
-                        https://www.w3resource.com/cpp-exercises/basic/index.php
-                        ...
-            //
-            old ones:
-                t- sum/multiple/xxx(basic math) two numbers 
-                    input: 12 24
-                    output: 36
-                    check: with calcu. (online is ok)
-                t- loop over to print numbers/shapes
-                    10times 2d loop
-                    yanhui triangle 
-                    triangle with * 
-                    ...
-                t- dsf- jitu tonglong 
-                t- dsf- 水仙花数， xxx数
-            https://www.w3resource.com/cpp-exercises/basic/index.php
-                t- Print the American flag
-                    expected io: clear 
-                t- find the area of Scalene Triangle
-                    expected io:
-                        Input the length of a side of the triangle : 5
-                        Input the length of another side of the triangle : 6
-                        Input the angle between these sides of the triangle : 6
-                        The area of the Scalene Triangle is : 1.56793
-                    n28, https://www.w3resource.com/cpp-exercises/basic/index.php
-                t- convert temperature in Celsius to temperature in Fahrenheit
-                    ref. https://www.w3resource.com/cpp-exercises/basic/index.php   
+            Inheritance 
+                qq types of Inheritance? x5 
+                qq does c++ support multiple Inheritance? y 
+                Hybrid (Virtual) Inheritance
+            Polymorphism 
+                pp- access the child method in parent? 
+                Real life example of polymorphism, a person at the same time can have different characteristic.
+                Compile time Polymorphism  x2 
+                    function overloading or operator overloading
+                    multiple functions with same name but different parameters
+                    change in number of arguments or/and change in type of arguments.
+                Runtime Polymorphism
+                    Function overriding on the other hand occurs when a derived class has a definition for one of the member functions of the base class. That base function is said to be overridden
+                    virtual function, binded at runtime (Runtime polymorphism) 
+                    qq to show that we want to overwrite a func. in base class, we have to declear that the func. is virtual? y!
+                    虚函数的作用是允许在派生类中重新定义与基类同名的函数
+                    t- a base class and a drived class, access two methods, one is virtual and the other not.  
+                        -task_virtual func
+            Encapsulation 
+                wrapping up of data and information under a single unit.
+                Encapsulation is defined as binding together the data and the functions that manipulates them
+                in a company there are different sections like the accounts section, finance section, sales section etc.
+                Now there may arise a situation when for some reason an official from finance section needs 
+                    all the data about sales in a particular month.
+                Encapsulation also lead to data abstraction or hiding
+                Class and access modifiers: getter and setters 
+            Structure vs class in C++
+                A Structure is not secure and cannot hide its implementation details from the end user while a class 
+                    is secure and can hide its programming and designing details.
+                Members of a class are private by default and members of a struct are public by default.
+                security issues 
+            qq Can a C++ class have an object of self type?
+                static is fine 
+            qq  static member functions do not have this pointer.? y not related to instance 
+                A static member function can not be declared const
+                The object called by these functions cannot be modified. 
+            Local Classes in C++
+                A local class type name can only be used in the enclosing function. invalid in main()
+                all func. in this method 
+            constructors 
+                Default constructor is the constructor which doesn’t take any argument. It has no parameters.
+                and does not have return val. at the same time 
+                Constructor has same name as the class itself
+                Constructors don’t have return type
+                A constructor is automatically called when an object is created.
+                default constructor expects no parameters and has an empty body
+                qq three typies? 
+                Point p2 = p1; // Copy constructor is called her
+                qq what is a copy constructor? 
+            initializer list 
+                comma-separated list followed by a colon. 
+                Test(int &t):t(t) {}
+                t- write a point class and initialize it with initializer List 
+                    -task_initialier
+            deconstructor 
+                A destructor function is called automatically when the object goes out of scope:
+                    (1) the function ends
+                    (2) the program ends
+                    (3) a block containing local variables ends
+                    (4) a delete operator is called 
+                qq Can there be more than one destructor in a class? n 
+                The default destructor works fine unless we have dynamically allocated memory or pointer in class.
+                When a class contains a pointer to memory allocated in class, we should write a destructor to release 
+                    memory before the class instance is destroyed. This must be done to avoid memory leak.
+                t- constru. a string class and write a deconstructor for it! 
+                    -task_deconstructor
+            Copy elision (or Copy omission) 
+                a compiler optimization technique avoid too many copy operations 
+            The ‘fill’ function in STL 
+                assigns the value ‘val’ to all the elements in the range [begin, end)
+            c++ stl 
+                c++ vector loop! 
+                    Vectors are same as dynamic arrays with the ability to resize itself automaticall
+                    Vector elements are placed in contiguous storage so that they can be 
+                        accessed and traversed using iterators
+                    lots of functions! 
+                        https://www.geeksforgeeks.org/vector-in-cpp-stl/
+                        Iterators 
+                            begin(),end()... 
+                        Capacity
+                            reserve() – Requests that the vector capacity be at least enough to contain n elements.
+                        Element access:
+                            at() 
+                            front() ... back()... 
+                        *Modifiers! train them all! maybe in one file
+                            push_back() 
+                            pop_back()
+                            insert() 
+                            erase() 
+                            emplace() 
+                            emplace_back()
+                            swap()
+                            ...
+                        qq diff. of  emplace_back and push_back? 
+                            Well in C++17 will return a reference to element that was just created in the vector where as push_back does not return anythin
+                            emplace_back will be more effi. when the case of passing an object such as a string 
+                        t- train them all! maybe in one file
+                            push_back() 
+                            pop_back()
+                            insert() 
+                            erase() 
+                            emplace() 
+                            emplace_back()
+                            swap()
+                                -task_func of vector
+                list stru. 
+                    Lists are sequence containers that allow non-contiguous memory allocation
+                    As compared to vector, list has slow traversal, but once a position has been found, insertion and deletion are quick!
+                    qq diff. bet. vector and list? 
+                    when we say a List, we talk about doubly linked list.
+                    t- constru. a list which contains 2^n show and sort it! vis. it the sorting process!
+                        push_back, push_front 
+                        write a func. names show_list() 
+                        we can call sort on a given list, vec? pp- 
+                            -task_func of list
+                    list_name.emplace(position, element)
+                        It returns a random access iterator which points to the newly inserted element.
+                    we may use auto in this case! 
+                        auto it = lis.emplace(lis.begin(), 2); 
+                    
+            auto 
+                can be used esp. the case of a returned value! 
+                t- declaration a list of pair: int and a char, print them out, loop with keyword auto!     
                     -
-                t- compute the total and average of four numbers
-                t- show the diff. size of float, double vars. 
-                    size of bool? 
-                    expected: (test cases:)
-                        The sizeof(char) is : 1 bytes
-                        The sizeof(short) is : 2 bytes
-                        The sizeof(int) is : 4 bytes
-                        The sizeof(long) is : 8 bytes
-                        The sizeof(long long) is : 8 bytes
-                        The sizeof(float) is : 4 bytes
-                        The sizeof(double) is : 8 bytes
-                        The sizeof(long double) is : 16 bytes
-                        The sizeof(bool) is : 1 bytes
-                t- check the upper and lower limits of integer.
-                    (use INT_MAX, INT_MIN...) 
-                        The maximum limit of int data type :                  2147483647      
-                        The minimum limit of int data type :                  -2147483648     
-                        The maximum limit of unsigned int data type :         4294967295      
-                        The maximum limit of long long data type :            9223372036854775807                                                                    
-                        The minimum limit of long long data type :             -9223372036854775808                                                                  
-                        The maximum limit of unsigned long long data type :   18446744073709551615                                                                   
-                        The Bits contain in char data type :                  8               
-                        The maximum limit of char data type :                 127             
-                        The minimum limit of char data type :                 -128            
-                        The maximum limit of signed char data type :          127             
-                        The minimum limit of signed char data type :          -128            
-                        The maximum limit of unsigned char data type :        255             
-                        The minimum limit of short data type :                -32768          
-                        The maximum limit of short data type :                32767           
-                        The maximum limit of unsigned short data type :       65535
-                t- find the area of any triangle using Heron's Formula.
-                    Heron's formula states that the area of a triangle whose sides have lengths
-                    semiperimeter of a polygon is half its perimeter
-                    exp:
-                        Input the length of 1st side of the triangle : 5
-                        Input the length of 2nd side of the triangle : 6
-                        Input the length of 3rd side of the triangle : 7
-                        The area of the triangle is : 14.6969
-                t- calculate area of an equilateral triangle
-                    exp:
-                        Input the value of the side of the equilateral triangle: 5
-                        The area of equilateral triangle is: 10.8253
-                t- calcu. the area of a hexagon
-                    io:
-                        Input the side of the hexagon: 6
-                        The area of the hexagon is: 93.5307
-                t- compute the shortest distance between two points on the surface of a sphere
-                    given https://en.wikipedia.org/wiki/Great-circle_distance as ref. 
-                        + radians, the calcu. of arc length d 
-                            what is latitude? be transfered to angle? radiance? 
-                            radians is bet. (0-3.1415... when we have angle bet. 0 to 360? unit circle? )
-                    io:
-                        Input the latitude of coordinate 1: 25
-                        Input the longitude of coordinate 1: 35
-                        Input the latitude of coordinate 2: 35.5
-                        Input the longitude of coordinate 2: 25.5
-                        The distance between those points is: 1480.08
-                t- gen. primes within 1000000 quickly(not using table, hard for coding)
-                    io: clear 
-                t- mem allocation precisely 
-                t- string calculator 
-                    io clear.
-                    ltc. 
-                t- swap all digits of a decimal number 
-                t- from decimal to binary calcu. or, other forms  
-                    ltc.
-                t- swap only two digits, the first and the last 
-                    -> math calcu. 
-                t- string replacement with in a string text 
-                    io clear. 
-                t- find max element in an array with custom comparation func. std::max_ele...
-                    http://www.cplusplus.com/reference/algorithm/max_element/   
-            https://edabit.com/challenges/cpp
-                t- validate a string by checking if there is any space 
-                    hasSpaces("hello") ➞ false
-                    hasSpaces("hello, world") ➞ true
-                    hasSpaces(" ") ➞ true
-                    hasSpaces("") ➞ false
-                    hasSpaces(",./!@#") ➞ false   
-            https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/ leetcode!    
-                restricted, but still, can observe some 
-            DS free tasks from oj! for all lan. (vs lan-feature based)
-        ---oj hierarchy ---x10days 
-            DS based tasks(not only stl)
-                // heuristics:
-                    NP problems(theory review first)
-                    oj 
-                    books 
-                simple-ones, use set, map, 
-                list-based 
-                    t- ...
-                tree-based 
-                    basic bin. tree
-                    advanced trees:
+            friend
+                A friend class can access private and protected members of other class 
+                a LinkedList class may be allowed to access private members of Node
+                use case? LinkedList, Node 
+                Friends should be used only for limited purpose.
+                    it lessens the value of encapsulation of separate classes in object-oriented programming.
+                Friendship is not mutual.not inherited
+                friend class B; , means that we can access B in a, "B is my friend, my private vars. 
+                    are allowed to be access. by B"
+                "allow"
+                t- demo. this friend with classes A and B C, B can access the private vars. 
+                    of A and C, print them out. 
+                    in two ways x2 
+                        -task_keyword friend
+                *the order of class blocks does matter? y how? 
+                    - write *largest classes first(pp- ?) may work
+                        smaller ones has private vars.  
+                    - we have to follow the order of *header files and their imp. 
+                        // cpp file below: (logically)
+            Nested Classes
+                nested class can access private members of Enclosing class, and not true the conter case 
+            
+                
+                
+
+            ...
+        online
+            https://www.geeksforgeeks.org/c-plus-plus/
+            basic 
+                Functions provide abstraction. For example, 
+                    we can use library functions without worrying about their internal working.
+                Conclusion is scope resolution operator is for accessing static or class members 
+                    and this pointer is for accessing object members when there is a local variable with same name.
+            IO 
+                Tokenizing a string in C++
+            STL lib. - old
+                是一套功能强大的 C++ 模板类，提供了通用的模板类和函数，这些模板类和函数
+                    可以实现多种流行和常用的算法和数据结构，如向量、链表、队列、栈
+                C++ 语言的核心优势之一就是便于软件的重用
+                标准模板库 (Standard Template Library)就是一些常用
+                    数据结构和算法的模板的集合。主要由 Alex Stepanov开发，
+                    于1998年被添加进C++标准
+                相对的，每个人都该实现一下自己的算法库
+                    首先，可以提供新的研究成果，近似算法xxx
+                    其次，方便理解，别人写的你总归是不理解的！
+                有了STL，不必再从头写大多的标准数据结构和算法，并且可获得非常高的性能。
+                核心：容器，迭代器，算法
+                容器：可容纳各种数据类型的数据结构。
+                    1) 顺序容器
+                        vector：后部插入/删除，直接访问
+                        deque：前/后部插入/删除，直接访问
+                        list：双向链表，任意位置插入/删除
+                    2)关联容器
+                        set：快速查找，无重复元素
+                        multiset ：快速查找，可有重复元素
+                        map：一对一映射，无重复元素，基于关键字查找
+                        multimap ：一对一映射，可有重复元素，基于关键字查找前2者合称为第一类容器
+                    3)容器适配器
+                        stack： LIFO
+                        queue： FIFO
+                        priority_queue：优先级高的元素先出容器概述
+                
+                    头文件
+                        1) vector 头文件 <vector>
+                            实际上就是个动态数组。随机存取任何元素都能在常数时间完成。
+                                在尾端增删元素具有较佳的性能。
+                        2) deque 头文件 <deque>
+                            也是个动态数组，随机存取任何元素都能在常数时间完成(但性能次于vector)。
+                                在两端增删元素具有较佳的性能。
+                        3) list 头文件 <list>
+                            双向链表，在任何位置增删元素都能在常数时间完成。    
+                                不支持随机存取，查询的时候要从头开始。
+            *STL 
+                https://zh.m.wikibooks.org/wiki/C%2B%2B
+                set
+                    each element has to be unique
+                    The value of the element cannot be modified once it is added to the set
+                    set <int, greater <int> > :: iterator itr; 
+                    t- basic usage of a set? 
+                        https://www.geeksforgeeks.org/set-in-cpp-stl/
+                        -task_basic_set
+                vector, list
                     ...
-                graph-based 
-                created_stru-based 
-                t- demostrate xxx DS!!
-            Algo. based 
-                // algo problems?? NP hard? 
-                t- demostrate diff. sorting algos! 
-                t- demostrate xxx algos!
-            -> vis. and interaction with algos. 
-                proj.
-            mixed, competition 
-                huawei 
-                tencent 
+                stack, queue, Priority Queue
+                    push(g) and pop(), pop() function deletes the first element of the queue.
+                    t- push some numbers into queue and write a showq func. that shows the 
+                        elements of the queue 
+                        https://www.geeksforgeeks.org/queue-cpp-stl/
+                        -task_basic_queue
+                    t- use a stack to inverse a list, vector, array? 
+                        https://www.geeksforgeeks.org/stack-in-cpp-stl/
+                        -task_basic_stack
+                    Priority queue 
+                        first element of the queue is the greatest of all elements in the queue and elements 
+                            are in non increasing order
+                    t- try max heap and min heap with help of Priority queue  x2 
+                        https://www.geeksforgeeks.org/priority-queue-in-cpp-stl/
+                        push and show the state of them!!
+                        hard to rem min heap -- we can multiply values with -1 and use max heap 
+                            to get the effect of min heap! * use this method! 
+                            -task_maxminheap
+                    --- variations
+                        Forward list 
+                            implements singly linked list. Introduced from C++11,
+                                simpler version of list? pp- 
+                            It differs from list by the fact that forward list keeps track of location of only next 
+                                element while list keeps track to both next and previous elements.
+                            thus increasing the storage space required to store each element.
+                            The drawback of forward list is that it cannot be iterated backwards 
+                                and its individual elements cannot be accessed directly.
+                            Forward List is preferred over list when only forward traversal is required
+                            *chaining in hashing, adjacency list representation of graph, etc.
+                            std::list 是双向链表，每个成员保持指向下一项与前一项的两个指针，因此可以双向遍历，但消耗内存空间更多，插入或删除成员时的速
+                            forward_list在容器内任意位置的成员的插入、提取（extracting）、移动、删除操作的速度更快，因此被广泛用于排序算法。
+                        Double ended queues are sequence containers with the feature 
+                            of expansion and contraction on both the ends.
+                map 
+                    Map in STL is used to hash key and value.
+                    We can also use map for pairs.
+                    t- use hashing tech to mark the posi. in a (large) Matrix. show where is not marked! 
+                        given a matrix and positions visited, print which positions are not visited.
+                        https://www.geeksforgeeks.org/map-pairs-stl/
+                        -task_hashing task to mark
+                range based loop 
+                    Range-based for loop in C++ is added since C++ 11. It executes a for loop over a range. 
+                    Used as a more readable equivalent to the traditional for loop operating
+                    in a container* -- that means all containers in stl can be iterated in this way
+                    t- Printing string characters, use range based loop ! 
+                        https://www.geeksforgeeks.org/range-based-loop-c/
+                        -task_printwithrangebasedloop
+                Multisets 
+                    are a type of associative containers similar to set, 
+                    with an exception that multiple elements can have same values.
+                make_heap()
+                    for vectors, make vectors into heaps 
+                    using push_heap() to reorder elements 
+                    https://www.geeksforgeeks.org/heap-using-stl-c/
+                    v1.front() to access the maximum val. in a heap 
+                    t- make a vector to heap and show the max. one. then push a val., reorder it! 
+                        -task_make_heap
+                K-ary heaps 
+                    generalization of binary heap(K=2) in which each node have K children instead of 2
+                    Max k-ary heap and Min 
+                    faster decrease key operation as compared to binary heap
+                    https://www.geeksforgeeks.org/k-ary-heap/
+        book--c++ primer plus 
+            // --x4days 
+            // it was not so hard part, and seems not so interesting -- 耐住性子
+            // what can i learn from such a reading?
+                expressions of besic concepts 
+                accurate know. about the c++ -- it is a basic task! 
+                can occa. use better representation to model a problem when researching 
+                precise! 
+                do not be too detailed -- tasks should be meaningful 
+                    eg. ignore: 
+                        File IO: just basic is enough 
+                        history of c++ 
+                        ...
+                list questions that can review c++ anytime you want by reviewing them 
+                    and also, the tasks! refine them or re-implement them from time to time! 
+                知识点琐碎，描述冗长。主要还是自己一知半解。
+                一知半解的东西最难学：需要足够的耐性，时间。80%是已知的就会觉得很无聊
+                好在主要看英文版的，很多表达我是没有接触过的！实在不行相当于在学英文！ 
+            // 
+                total pages = 1438    
+                page gap = 15 
+                cur page = 112, 
+            ch02 38 pages 
+                op42 
+                Placing comments in a C++ program
+                Similarly, when you learn a computer language, you should begin by learning
+                    the basic structure for a program.
+                it is similar to construct a simple home 
+                an overview of the essential structure of a C++ program and previews some topics
+                cout is a  facility to produce character output
+                C++ is case sensitive
+                    it discriminates between uppercase characters and lower case 
+                compiler rejects your offering and accuses you of using unknown identifiers.
+                include s are a PREPROCESSOR directive
+                function header, func. body ! 
+                Program Adjustments
+                you can make the window stay open until you strike a key
+                check the registration link on the back cover for more information
+                back cover 
+                You won’t regret it!
+                uses C++’s input facilities, instead of c's input facilities
+                organize a program into major tasks and then design separate 
+                    functions to handle those
+                A function body, delimited by { and }
+                A return statement to terminate the main() function
+                Stripped of the trimmings, we can see the fundamential struc. 
+                function header,and the portion enclosed in braces ({ and })
+                    - the portion enclosed in braces is called function body 
+                However, the ISO Standard uses the term “braces.”
+                In C++ each complete instruction is called a statement
+                You must terminate each statement with a semicolon
+                A statement represents an action to be taken
+                The practical upshot is that in  C++ you should never omit 
+                    the semicolon.
+                who  can’t put their curiosity on hold
+                a C++ function is activated, or called, by another function
+                The part preceding the function name is called the function return type;
+                The part within the parentheses following the function name
+                    is  argument list or parameter list
+                you normally don’t call main() from other parts of your program
+                In effect, the function header describes the interface 
+                    between main() and the operating system
+                In this case, the empty parentheses mean that the main() function takes no information
+                qq- what is the  original C style? 
+                Using the keyword void in the parentheses is an explicit way of 
+                    saying that the function takes no argument
+                qq- we should not use vois main() style? 
+                    should avoid this form and use the C++ Standard form;
+                    not part of c++ standard 
+                the implicit return is provided only for main() and not for     
+                    any other function.
+                op47 
+                There’s an extremely compelling reason to name a main func. with 
+                    main and not the others 
+                Remember, case and spelling count
+                that function must bear the responsibility of being main()
+                execution always begins at the beginning of the main() function
+                qq- what happends if you do not have a main func.? 
+                    the compiler points out that you haven’t defined
+                you can write a dynamic link library (DLL) module
+                Because a DLL module is not a standalone program
+                it does nt need a main() func. 
+                some non-standard such as tmain() may exists, 
+                    in that case there is a hidden main() that calls _tmain(). 
+                    But your ordinary standalone program does need a main();
+                double slash (//) introduces a C++ comment
+                comments are usua. used to explain some aspect of the code
+                qq- As far as the compiler is concerned, what does it looks like? 
+                qq- what kinds of comments are there? x4 
+                    c++ style, c style...
+                    and /// for document generation 
+                qq- we have to stick to c++ style? 
+                    Because it doesn’t involve remembering to correctly pair
+                    an end symbol with a begin symbol, it’s less 
+                    likely to cause problems    
+                filename extention depends on your C++ system
+                The more complex the program, the more valuable comments are.
+                The GNU compiler is available for many platforms
+                Linux systems most commonly use g++, the GNU C++ compiler from the 
+                    Free Software Foundation
+                C comments, which are enclosed between /* and */ symbols
+                (If your compiler doesn’t like these lines, it’s not C++98 compatible
+                It automatically operates when you compile the program
+                This directive causes the preprocessor to add the contents of the iostream file to 
+                    your prog. 
+                we need these def. in order to use the cout facility to
+                    display a message
+                op49 
+                the original source file is not changed, but goes on to the next stage of compilation.
+                Programs that use cin and cout for input and output must include the iostream file.
+                C++ compilers come with many header files, each supporting a particular family of facilities
+                initially, the header file supporting input and output was named iostream.h
+                Now the h extension is reserved for the old C header files
+                qq- why we not use iostream.h> as include filename? what is the diff. ? 
+                C++ header files have no extension
+                also C header files that have been converted to C++ header files
+                    dropping the h extension (making it a C++-style name) and 
+                    prefixing the filename with a c (indicating that it comes from C)
+                dropping the h is more than a  cosmetic change, for the h-free header files also incorporate namespaces
+                qq- how to explain the <cmath> header? where does it come? 
+                naming conventions for header files.
+                op50 
+                This is called a using directive
+                pre-existing code from several vendors
+                help organize programs
+                Piscine::wanda() could denote Piscine Corporation’s version of wanda()
+                your program could now use the namespaces to discriminate between various versions:
+                classes, functions,and variables that are a standard component are named in a namespace 
+                    called std
+                they can do so without a lot of hassle
+                it is prefered to make just particular names available -- detail depends on the existing code 
+                    in cgv 
+                using namespace std; // lazy approach, all names available
+                The part enclosed within the double quotation is a string var. 
+                any series of characters enclosed in double quotation marks is called a character string
+                the symbols point the way the information flows
+                You don’t have to know the innards of an object in order to use it.
+                qq- what is the conceptual view of printing a string out? 
+                insertion operator (<<) that inserts the information on its right into the stream
+                rather than say that your program displays a message, you can say that it inserts a string
+                    into the output stream.
+                in bkg, this happends by  Operator Overloading
+                the same as bitwise left-shift operator (<<) in c lan 
+                same operator symbol can have different meanings
+                C itself has some operator overloading. For example, the & symbol represents both 
+                    the address operator and the bitwise AND operator.
+                The * symbol represents both multiplication and dereferencing a pointer
+                redefine operator meanings for the user-defined types called classes.
+                Inserting endl into the output stream causes the screen cursor to move to the 
+                    beginning of the next line
+                to try out these output examples, you have to place them in a complete program
+                qq- we can also use \n to move to the next line? y 
+                more ancient
+                it is considered to be a single character called the newline character
+                most people find the keystrokes for endl to be more comfortable
+                qq- what is the diff. with "\n" and endl? 
+                    endl guarantees the output will be flushed (in, this case, immediately displayed onscreen
+                in c++, we can treat the carriage return in the same way as a space
+                This is visually ugly but valid code
+                they are collectively are termed white space
+                qq- why this is invalid? 
+                    intmain(); // INVALID, white space omitted
+                An opening brace and a closing brace for a function, each of which is on its own line
+                we should keeping the code clean and readable
+                A C++ program is a collection of functions,and each function is a collection of statements
+                op56 
+                This practice is the usual C convention, but it’s somewhat less common in C++.
+                The next few pages examine this program
+                Computers are precise, orderly machines
+                int is ,a number with no fractional part
+                the size range depends on the implementation.
+                we have to  check for omitted declarations
+                The problem is that if you misspell the name of a variable
+                This kind of error can be hard to trace
+                in c++, compiler catches the error and stomps the potential bug.
+                a declaration need not be a definition, but in this example it is
+                the usual C++ style is to declare a variable just before it is first used.
+                    That way, you don’t have to rummage back through a program to see what the type is
+                *The C++ style for declaring variables is to declare a variable as close to its first use as possible.
+                we can can use the assignment operator serially
+                The assignment works from right to left. 
+                    we read them as:  88 is assigned to steinway;
+                c++ allows you Without going into the intricacies of printf()
+                *In essence, the C++ insertion operator (<<) adjusts its behavior to fit the type of data
+                to cling to your hard-won mastery of printf()
+                That is, you can redefine the << operator so that cout can recognize and display new data types you develop
+                And if you relish the fine control printf() provides
+                op60 
+
+                    
                 ...
-            ---
-            reasoning view for triple analysis(graph)
+            ch03 50 pages
+            ch04 80 pages 
+            ch05 58 pages
+            ch06 52 pages
+            ch07 74 pages
+            ch08 .. pages
+            ch09 .. pages
+            ch10 .. pages
+            ch11 .. pages
+            ch12 .. pages
+            ch13 .. pages
+            ch14 .. pages
+            ch15 .. pages
+            ch16 .. pages
+            ch17 .. pages
+            ch18 .. pages
+            ch19 STL  .. pages
+            ... 
+        book--TeachYourself c++ in one hour a day
+    ---algo
+        //很多数据结构都不必非要从头实现（如果非要创造新的），在c++ stl中可以复用！
+        book--算法竞赛入门经典
+            file:///C:/Users/yzy/Desktop/base_c++_oj%20hierarchy/r0-res/chs/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8+%E5%AE%8C%E6%95%B4%E7%89%88.pdf
+            ch01
+            ch02 
                 ...
-        ---extension 
-            field calculus 
-                // field background first!! 
-                t- demostrate xxx process! (phy, chem, machinary...)
-            -> field vis. and interaction (*center of computer graphics for vis. and inter.)
-                proj. --> will be split into pieces, not basic learning process, not so good but interesting
-    
+            ch03 
+            ch04 
+            ch05 
+            ch06 
+            ch07 
+            ch08 
+            ch09 
+            ch10 
+            ch11 
+        book--算法 java描述
+            （学的时候重在理解概念，代码转成c++）（可以考虑从网上搜索相应代码段）
+            file:///C:/Users/yzy/Desktop/base_c++_oj%20hierarchy/r0-res/chs/%E7%AE%97%E6%B3%95(%E7%AC%AC%E5%9B%9B%E7%89%88).pdf
+            ch01
+            ch02 
+                ...
+            ch03 
+            ch04 
+            ch05 
+            ch06
+        book--算法导论 en
+    ---libs.
+        library--the STL libs, headers <algorithm>! ... 
+            ref. 
+        library--boost 
+    ---summ. & tasks designed 
+        summerize-theory review 
+            +
+                参考
+                    http://www.runoob.com/cplusplus/cpp-comments.html
+                概述	
+                    编译语言与解释语言
+                    最经典的编译语言是c，最经典的解释语言是Ruby
+                    解释语言效率未必就低于编译语言，可以通过加强解释器来实现解释语言执行的优化
+                    相比matlab，具有开源优势
+                    相比java与c这种强类型语言，具有更好
+                    强类型语言与弱类型语言
+                        弱类型的语言的东西没有明显的类型,他能随着环境的不同,自动变换类型，比如vbs、javascript语言。变量声明比较简单，仅仅是var就可以解决。
+                        强类型比如java、c
+                    强类型语言实现数学操作比较费劲
+                    编译器
+                        mingw是gcc 的windows的移植版  
+                        mingw支持win32API 单一编译器可以支持多个API 
+                        主函数加载  变量声明 以及函数调用是受API说明 以及编译器支持的   
+                        mingw  gcc编译器支持win32API    
+                        c51   单片机编译器支持  c51API
+                        gcc的各种版本：mingw
+            //
+                快速复习，’说破而不戳破‘
+                把概念高度概括，起码自己再看的时候知道怎么回事，直接就可以写代码
+                题目--笔记--code
+                    不到万不得已不要看code，争取自己可以做出来 
+                    笔记相当于一种有效快速的提示（网上的东西杂乱）
+                    
+            =======================语言基础=====================
+                基本环境：引入iostream，其中定义了一些标准对象，使用std命名空间 打印hello &
+                数据类型表达式
+                    七种基本的 C++ 数据类型(小写)
+                        int 
+                        float double
+                        char
+                        bool
+                    用大括号括起来是语句块
+                    C++ 是区分大小写的编程语言，Manpower 和 manpower 是两个不同的标识符。
+                    保留字不能作为常量名、变量名或其他标识符名称
+                    三字符组就是用于表示另一个字符的三个字符序列，用来表示特殊字符
+                    注释快捷键（VS2013）
+                        注释Ctrl+K+C
+                        取消Ctrl+K+U
+                    块注释符（/*...*/）是不可以嵌套使用的。
+                    使用 typedef 为一个已有的类型取一个新的名字 &
+                        typedef int feet;feet distance;
+                    枚举类型(enumeration)是C++中的一种派生数据类型
+                        enum color { red, green, blue } c;
+                        枚举名color，red标识符，c枚举常量
+                        默认情况下，第一个名称的值为 0，第二个名称的值为 1，第三个名称的值为 2
+                        也可以给名称赋予一个特殊的值，只需要添加一个初始值即可。例如，在下面的枚举中，green 的值为 5。
+                        enum color { red, green=5, blue };
+                        在这里，blue 的值为 6，因为默认情况下，每个名称都会比它前面一个名称大 1，但 red 的值依然为 0。
+                    float 23位小数。double，52位小数
+                    ***不带初始化的定义：
+                        带有静态存储持续时间的变量会被隐式初始化为 NULL（所有字节的值都是 0），其他所有变量的初始值是未定义的。
+                    指向内存位置的表达式被称为左值表达式（lvalue）。
+                    右值是不能对其进行赋值的表达式，也就是说，右值可以出现在赋值号的右边，但不能出现在赋值号的左边。
+                    变量是左值，因此可以出现在赋值号的左边
+                    ***义全局变量时，系统会自动初始化！，为0值：
+                    定义一个无符号长整数 &
+                    定义一个浮点数常量，计算长度 &
+                        314159E-5L 
+                    空格可以分割字符串 &
+                    使用 #define 预处理器定义常量 &（最好是大写字母）
+                    有符号整数和无符号整数使用范围是不同的，输入一个正数，有符号整数可能解释为负数 50000 int &
+                    自己的类定义
+                        class 开头，后跟类的名称。类的主体是包含在一对花括号中。类定义后必须跟着一个分号或一个声明列表
+                        定义一个Box类，写get set方法，使用标准的定义过程，加上构造函数 &
+                        构造函数
+                            构造函数的名称与类的名称是完全相同的，并且不会返回任何类型，也不会返回 void ！
+                            初始化列表来初始化字段
+                            类成员函数或者构造函数定义的时候可以无歧义的直接使用成员变量名
+                            应该是public 的
+                            在main中使用时（两种都可以） &
+                                不用new关键字：自动在栈中为每个变量开辟内存空间
+                                使用new：在堆中创建，默认调用构造方法（动态内存）
+                        成员属性
+                            默认情况下，类的所有成员都是私有的
+                            保护成员在派生类（即子类）中是可访问的
+                            有public, protected, private三种继承方式，它们相应地改变了基类成员的访问属性。
+                        公共数据成员可以使用直接成员访问运算符 (.) 来访问
+                        类定义内部仅仅进行成员函数声明，方便管理，声明就是一个函数头，没有函数体
+                        类方法最好使用范围解析运算符 :: 来定义，在类定义外部
+                        有元 *
+                            有元函数可以不通过类名直接调用，但是没有this指针
+                        内联函数 
+                            比较大小的内联函数 &
+                            如果已定义的函数多于10行，编译器会忽略 inline 限定符。
+                            加快调用速度
+                            实质是空间换时间
+                                程序在编译器编译的时候，编译器将程序中出现的内联函数的调用表达式用内联函数的函数体进行替换，
+                                而对于其他的函数，都是在运行时候才被替代。这其实就是个空间代价换时间的i节省。
+                        this指针
+                            每一个对象都能通过 this 指针来访问自己的地址 *
+                            因为友元不是类的成员。只有成员函数才有 this 指针。
+                        指向类的指针
+                            一个指向 C++ 类的指针与指向结构的指针类似
+                            动态计算Box1 2的体积 &
+                        类的静态成员
+                            这意味着无论创建多少个类的对象，静态成员都只有一个副本。
+                            实现一个类实例的计数器 &（每次构造的时候加1）
+                    数组 
+                        个数是固定的，为了效率
+                        数组名可以直接用于指针运算
+                        生成 10 个随机数，并使用数组来返回它们 &
+                        数组地址传给函数，生成数组序列 &
+                        字符串
+                            C++ 编译器会在初始化数组时，自动把 '\0' 放在字符串的末尾
+                            各种字符串操作: &
+                                strcpy
+                                strcat
+                                strlen
+                                strcmp
+                                strchr
+                            String类型|：
+                                C++ 标准库提供了 string 类类型，支持上述所有的操作，另外还增加了其他更多的功能。
+                    指针类型
+                        动态内存分配，没有指针是无法执行的
+                        连字号（&）运算符访问的地址，取地址操作
+                        *是取值操作
+                        注意区分指针的声明和使用
+                        指针的实际数据类型是 是一个代表内存地址的长的十六进制数
+                        指针可以用来指向一个真实的变量地址，用来取变量的数值，传值等操作
+                        数组指针：指向数组开头的常量，不能作为左值
+                            本身不可以变，但是取值之后的数值是可以变得
+                        构造一个数组，把 var[2] 赋值为 500 &
+                    引用类型
+                        引用变量是一个别名，也就是说，它是某个已存在变量的另一个名字
+                        引用必须在创建时被初始化。指针可以在任何时间被初始化。
+                        把引用当成是变量附属在内存位置中的第二个标签
+                        引用就是取别名，直接操作就可以
+                        主要应用
+                            函数参数
+                                交换两个int类型的数据 &
+                            把引用作为返回值
+                                不能返回局部变量的引用
+                                可以出现在赋值语句左边，
+                                写一个数组，改变数组中i位的数值 &
+                    结构类型
+                        结构是 C++ 中另一种用户自定义的可用的数据类型，同c语言中
+                时间运算
+                    C++ 标准库没有提供所谓的日期类型。C++ 继承了 C 语言用于日期和时间操作的结构和函数
+                    引入ctime，而后可以调用time函数 输出秒数&
+                    输出格式化的日期时间 &
+                        strftime()函数
+
+                数学运算
+                    引用数学头文件 <cmath>
+                    sin cos等静态函数操作 &
+                函数
+                    在函数声明时，最好提供一个函数名在main之前，而函数的实际定义则可以在任何地方进行
+                    返回两个数字中较大的数 &
+                    通过引用调用处理一个数组 &
+                    Lambda 函数与表达式
+                        增加可读性？一般不用
+                    实现汉诺塔 &
+                控制语句
+                    循环分支for while if
+                    输出上下三角 &
+                    九九乘法表 &
+                输入输出
+                    cout<<"string"<<endl，endl是换行符
+                    cin<<变量名；
+                    流提取运算符 >> 在一个语句中可以多次使用，如果要求输入多个数据，可以使用如下语句：
+
+                    scanf("%d",&x);传地址
+                    printf("%d",x);传数值
+                刷ACM题目 &&
+                命名空间
+                    定义命名空间 &
+                    using 指令
+                    嵌套的命名空间
+            =======================深入API（实现各种算法应用）===================
+                文件操作（最具有c++特色的用法）
+                    先写入文件，再读入 & ASCII 二进制模式的话要加上binary属性
+                    IOS是流式I/O的基类
+                    ios::in ios::out定义打开文件的属性
+                    写入文件
+                        通用法 fstream
+                        专用法 ofstream---in file stream 输入文件流
+                                初始化的时候默认调用open函数
+                                在这里您使用的是 ofstream 或 fstream 对象，而不是 cout 对象。
+                    读取文件
+                        通用法 fstream
+                        专用 ifstream
+                            在这里您使用的是 ifstream 或 fstream 对象，而不是 cin 对象。
+                            读取一行数据 &，使用ifstream中的getline函数，返回的数据在参数中（参数就是把一个buff）
+                    通用法打开文件要加上属性，看起来整齐
+                    推荐使用专用法
+                    而后就可以用cin cout来操作了
+                    文件对象别忘了关闭
+                多线程
+                    使用pthread开源库 &
+                        1.库文件直接放在项目中，引入include等目录
+                        2.放置dll文件在cpp文件夹中
+                        3.引用lib文件#pragma comment(lib, "pthreadVC2.lib")
+                c++ STL库
+                    模板类和函数可以实现多种流行和常用的算法和数据结构，如向量、链表、队列、栈
+                    容器（Containers），算法（Algorithms），迭代器（iterators）
+                    定义：向量容器<类型> 名称；
+                    调用：名称.算法；
+                    迭代器相当于指针，进行遍历的工具；
+                    动态创建数组，并输出所有元素，显示大小 &
+                    push_back( ) 成员函数在向量的末尾插入值，如果有必要会扩展向量的大小。
+                    begin( ) 函数返回一个指向向量开头的迭代器。
+                    size( ) 函数显示向量的大小。
+                    C++ 标准库包含了所有的 C 标准库，为了支持类型安全，做了一定的添加和修改
+                    标准的 C++ 面向对象类库定义了大量支持一些常见操作的类，比如输入/输出 I/O、字符串处理、数值处理
+                GUI操作
+                    QT
+                        概述
+                            不用跨平台：因为商业需要只能硬着头皮维护下去，浪费了公司大量的人力财力
+                            国内公司只是市场驱动的，它们不是真正技术驱动的公司，
+                                很多软件都是用开源改后包装成自己的，依靠垄断存活的
+                            QT你不能说他不流行吧, WPS, Wirshark, KDE, dropbox, skype, virtualbox都和qt有关吧, 你想写个跨平台的C++程序, QT是个不错的选择,
+                            如果是创业型小公司想开发适配自己公司产品的配套软件并想支持多平台那么Qt是不二的选择。
+                                想在4个平台开发软件假设工作量是4，那么用qt可以达到2.5左右。总体工作量减少
+                            在桌面Linux和嵌入式领域是主流地位
+                            环境搭建https://www.cnblogs.com/happykoukou/p/7457013.html &
+                        显示
+                        组件
+                        附加组件
+                        应用
+                            本地 &
+                                界面类：计算器，登陆界面，图书馆系统
+                                文档媒体：图片处理，文件名处理工具
+                                游戏：俄罗斯方块，扫雷
+                            网络 &
+                                http下载器
+                                ftp查看器
+                                网络发包ping
+                延时
+                    引入windows头文件，而后可以利用其中的Sleep函数进行延时，单位是毫秒 &
+                网络
+                    虽然 CGI 文件是 C++ 可执行文件，但是按照惯例它的扩展名是 .cgi
+                    Apache Web 服务器会配置在 /var/www/cgi-bin 中运行 CGI 程序
+                    请使用 chmod 755 cplusplus.cgi UNIX 命令来修改文件模式，确保文件可执行。访问可执行文件
+                    GET 和 POST 方法 &
+                    获取 Cookies
+                    文件上传实例
+                数据库
+            =======================超越API（实现自己的代码库）===================
+                注意项目封装
+                数值计算的库操作数组
+                    eigen库
+                        就是一个头文件与一些实现！！
+                        重写了一些操作符号，规范
+                        矩阵操作，特别是二维矩阵
+                        矩阵的乘除加减求逆求行列式
+                        Eigen速度最快，与自己定义数组的操作效率相当
+                        矩阵存储等有优化
+                        All classes and functions defined in this header file 
+                            (and other Eigen header files) are in the Eigen namespace！
+                        helloworld程序，添加一个矩阵 &
+                        随机生成矩阵+矩阵乘法运算 &
+                OpenGL库
+                OpenCV库
+            =======================根据工作要求=======================
+                GDB和LLDB
+                    他们两个都是调试用的Debugger，只是LLDB是比较高级的版本，或者在调试开发iOS应用时比较好用，不然人家苹果为什么换成了LLDB了呢！
+                GCC/Clang（LLVM库）
+                    它是一套以 GPL 及 LGPL 许可证所发行的自由软件，也是 GNU计划的关键部分
+                    GCC 原名为 GNU C 语言编译器，因为它原本只能处理 C语言。GCC 很快地扩展，变得可处理 C++
+                    LLVM 是 Low Level Virtual Machine 的简称，这个库提供了与编译器相关的支持，能够进行程序语言的编译期优化、链接优化、在线编译优化、代码生成
+                    Clang发布于 LLVM BSD 许可证下的 C/C++/Objective C/Objective C++ 编译器，其目标（之一）就是超越 GCC。
+                    但Apple对编译工具会提出更高的要求。
+                    GCC 基于 C，不需要 C++ 编译器即可编译
+                    苹果有关
+        summerize-small tasks designed:
+            ---lan. spec.
+                mixed
+                    t- demostrate map/hash/list/vector/heap... usage!!
+                    t- demostrate xxx usage!!
+                File IO
+                    read/write file 
+                    ...
+                Network
+                    ... 
+            ---Beginner Exercises online with Suggested Study Order! 
+                //  
+                    heuristics: 
+                        部分高中数学题目，尤其是数论有关
+                        poj水题目, or other ojs 
+                        c语言遗产
+                        data sci., basic vis. , img based
+                        search online "basic programming tasks" 
+                            https://www.w3resource.com/cpp-exercises/basic/index.php
+                            ...
+                //
+                old ones:
+                    t- sum/multiple/xxx(basic math) two numbers 
+                        input: 12 24
+                        output: 36
+                        check: with calcu. (online is ok)
+                    t- loop over to print numbers/shapes
+                        10times 2d loop
+                        yanhui triangle 
+                        triangle with * 
+                        ...
+                    t- dsf- jitu tonglong 
+                    t- dsf- 水仙花数， xxx数
+                https://www.w3resource.com/cpp-exercises/basic/index.php
+                    t- Print the American flag
+                        expected io: clear 
+                    t- find the area of Scalene Triangle
+                        expected io:
+                            Input the length of a side of the triangle : 5
+                            Input the length of another side of the triangle : 6
+                            Input the angle between these sides of the triangle : 6
+                            The area of the Scalene Triangle is : 1.56793
+                        n28, https://www.w3resource.com/cpp-exercises/basic/index.php
+                    t- convert temperature in Celsius to temperature in Fahrenheit
+                        ref. https://www.w3resource.com/cpp-exercises/basic/index.php   
+                        -
+                    t- compute the total and average of four numbers
+                    t- show the diff. size of float, double vars. 
+                        size of bool? 
+                        expected: (test cases:)
+                            The sizeof(char) is : 1 bytes
+                            The sizeof(short) is : 2 bytes
+                            The sizeof(int) is : 4 bytes
+                            The sizeof(long) is : 8 bytes
+                            The sizeof(long long) is : 8 bytes
+                            The sizeof(float) is : 4 bytes
+                            The sizeof(double) is : 8 bytes
+                            The sizeof(long double) is : 16 bytes
+                            The sizeof(bool) is : 1 bytes
+                    t- check the upper and lower limits of integer.
+                        (use INT_MAX, INT_MIN...) 
+                            The maximum limit of int data type :                  2147483647      
+                            The minimum limit of int data type :                  -2147483648     
+                            The maximum limit of unsigned int data type :         4294967295      
+                            The maximum limit of long long data type :            9223372036854775807                                                                    
+                            The minimum limit of long long data type :             -9223372036854775808                                                                  
+                            The maximum limit of unsigned long long data type :   18446744073709551615                                                                   
+                            The Bits contain in char data type :                  8               
+                            The maximum limit of char data type :                 127             
+                            The minimum limit of char data type :                 -128            
+                            The maximum limit of signed char data type :          127             
+                            The minimum limit of signed char data type :          -128            
+                            The maximum limit of unsigned char data type :        255             
+                            The minimum limit of short data type :                -32768          
+                            The maximum limit of short data type :                32767           
+                            The maximum limit of unsigned short data type :       65535
+                    t- find the area of any triangle using Heron's Formula.
+                        Heron's formula states that the area of a triangle whose sides have lengths
+                        semiperimeter of a polygon is half its perimeter
+                        exp:
+                            Input the length of 1st side of the triangle : 5
+                            Input the length of 2nd side of the triangle : 6
+                            Input the length of 3rd side of the triangle : 7
+                            The area of the triangle is : 14.6969
+                    t- calculate area of an equilateral triangle
+                        exp:
+                            Input the value of the side of the equilateral triangle: 5
+                            The area of equilateral triangle is: 10.8253
+                    t- calcu. the area of a hexagon
+                        io:
+                            Input the side of the hexagon: 6
+                            The area of the hexagon is: 93.5307
+                    t- compute the shortest distance between two points on the surface of a sphere
+                        given https://en.wikipedia.org/wiki/Great-circle_distance as ref. 
+                            + radians, the calcu. of arc length d 
+                                what is latitude? be transfered to angle? radiance? 
+                                radians is bet. (0-3.1415... when we have angle bet. 0 to 360? unit circle? )
+                        io:
+                            Input the latitude of coordinate 1: 25
+                            Input the longitude of coordinate 1: 35
+                            Input the latitude of coordinate 2: 35.5
+                            Input the longitude of coordinate 2: 25.5
+                            The distance between those points is: 1480.08
+                    t- gen. primes within 1000000 quickly(not using table, hard for coding)
+                        io: clear 
+                    t- mem allocation precisely 
+                    t- string calculator 
+                        io clear.
+                        ltc. 
+                    t- swap all digits of a decimal number 
+                    t- from decimal to binary calcu. or, other forms  
+                        ltc.
+                    t- swap only two digits, the first and the last 
+                        -> math calcu. 
+                    t- string replacement with in a string text 
+                        io clear. 
+                    t- find max element in an array with custom comparation func. std::max_ele...
+                        http://www.cplusplus.com/reference/algorithm/max_element/   
+                https://edabit.com/challenges/cpp
+                    t- validate a string by checking if there is any space 
+                        hasSpaces("hello") ➞ false
+                        hasSpaces("hello, world") ➞ true
+                        hasSpaces(" ") ➞ true
+                        hasSpaces("") ➞ false
+                        hasSpaces(",./!@#") ➞ false   
+                https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/ leetcode!    
+                    restricted, but still, can observe some 
+                DS free tasks from oj! for all lan. (vs lan-feature based)
+            ---oj hierarchy ---x10days 
+                DS based tasks(not only stl)
+                    // heuristics:
+                        NP problems(theory review first)
+                        oj 
+                        books 
+                    simple-ones, use set, map, 
+                    list-based 
+                        t- ...
+                    tree-based 
+                        basic bin. tree
+                        advanced trees:
+                        ...
+                    graph-based 
+                    created_stru-based 
+                    t- demostrate xxx DS!!
+                Algo. based 
+                    // algo problems?? NP hard? 
+                    t- demostrate diff. sorting algos! 
+                    t- demostrate xxx algos!
+                -> vis. and interaction with algos. 
+                    proj.
+                mixed, competition 
+                    huawei 
+                    tencent 
+                    ...
+                ---
+                reasoning view for triple analysis(graph)
+                    ...
+            ---extension 
+                field calculus 
+                    // field background first!! 
+                    t- demostrate xxx process! (phy, chem, machinary...)
+                -> field vis. and interaction (*center of computer graphics for vis. and inter.)
+                    proj. --> will be split into pieces, not basic learning process, not so good but interesting
+        
