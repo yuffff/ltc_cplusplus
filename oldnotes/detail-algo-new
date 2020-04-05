@@ -1,0 +1,80 @@
+
+    //acm problems in detail 
+    //snippets in an other folder 
+    //problem list also for training later 
+    
+  
+    phase2-
+            
+            
+        trees
+            
+        graph 
+            
+    phase3-books 
+    phase4-spec.fields
+    phase6-multicore programming 
+        helloworld: usage ， java multithread
+            创建线程
+                继承Thread类
+                    实现-extends Thread，重写run方法
+                    调用-创建实例，调用start方法
+                    If we extend the Thread class, our class cannot extend any 
+                        other class because Java doesn’t support multiple inheritance.
+                    if we implement the Runnable interface, our class can 
+                        still extend other base classes.
+                    
+                通过Runable接口
+            
+            同步块（synchronized block）
+                s-  
+                    静态同步--在类对象上
+                    实例同步--在类的实现，实例上进行同步
+                    “同步”就是避免访问错误，一种线程控制机制
+                用来标记方法或者代码块是同步的。Java同步块用来避免竞争。
+                同步块在Java中是同步在某个对象上。所有同步在一个对象上的同步块在同时只能被一个线程进入并执行操作。
+                所有其他等待进入该同步块的线程将被阻塞
+                四种不同的同步块
+                    实例方法
+                    静态方法
+                    实例方法中的同步块
+                    静态方法中的同步块
+                在方法声明中同步（synchronized ）关键字。这告诉Java该方法是同步的
+                每个实例其方法同步都同步在不同的对象上，即该方法所属的实例
+                如果有多个实例存在，那么一个线程一次可以在一个实例同步块中执行操作
+                静态方法的同步是指同步在该方法所在的类对象上
+                有时你不需要同步整个方法，而是同步方法中的一部分。Java可以对方法的一部分进行同步。
+                “this”参数就是实例本身
+                在同步构造器中用括号括起来的对象叫做监视器对象。
+                两个静态方法同步的例子。这些方法同步在该方法所属的类对象上
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

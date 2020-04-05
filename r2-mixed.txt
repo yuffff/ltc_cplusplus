@@ -1,4 +1,5 @@
     // 
+        pcode indicats ...
         网上资源其实也不少，但是总觉得不踏实，不系统
         题目肯定是无穷多的， tasks不可估计。但是知识点是有限的。
             不要被无限多的题目迷惑了双眼，掌握核心知识以后你也可以出题！
@@ -57,8 +58,12 @@
         A simple and complete C++ program demonstration should be summ. 
         modeling skills also needed! 
             modeling + coding
+        那些acmer高手，看似思路很快，其实就是知道的套路比你多
+        boost your cpu 
+        不要通过ACM这种形式来学习，性价比太低。
     ---c++ lan 
-        seed + Suggested Study Order
+        seed--with exp
+            Suggested Study Order
             by default, 5.0 refers to double in c++? y float? n 
                 how to varify this with a code? easy. 
             N大数据类型？ 
@@ -221,8 +226,7 @@
                 
 
             ...
-        online
-            https://www.geeksforgeeks.org/c-plus-plus/
+        online--https://www.geeksforgeeks.org/c-plus-plus/
             basic 
                 Functions provide abstraction. For example, 
                     we can use library functions without worrying about their internal working.
@@ -550,39 +554,7 @@
             ch19 STL  .. pages
             ... 
         book--TeachYourself c++ in one hour a day
-    ---algo
-        //很多数据结构都不必非要从头实现（如果非要创造新的），在c++ stl中可以复用！
-        book--算法竞赛入门经典
-            file:///C:/Users/yzy/Desktop/base_c++_oj%20hierarchy/r0-res/chs/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8+%E5%AE%8C%E6%95%B4%E7%89%88.pdf
-            ch01
-            ch02 
-                ...
-            ch03 
-            ch04 
-            ch05 
-            ch06 
-            ch07 
-            ch08 
-            ch09 
-            ch10 
-            ch11 
-        book--算法 java描述
-            （学的时候重在理解概念，代码转成c++）（可以考虑从网上搜索相应代码段）
-            file:///C:/Users/yzy/Desktop/base_c++_oj%20hierarchy/r0-res/chs/%E7%AE%97%E6%B3%95(%E7%AC%AC%E5%9B%9B%E7%89%88).pdf
-            ch01
-            ch02 
-                ...
-            ch03 
-            ch04 
-            ch05 
-            ch06
-        book--算法导论 en
-    ---libs.
-        library--the STL libs, headers <algorithm>! ... 
-            ref. 
-        library--boost 
-    ---summ. & tasks designed 
-        summerize-theory review 
+        book--old ones 
             +
                 参考
                     http://www.runoob.com/cplusplus/cpp-comments.html
@@ -851,167 +823,863 @@
                     但Apple对编译工具会提出更高的要求。
                     GCC 基于 C，不需要 C++ 编译器即可编译
                     苹果有关
-        summerize-small tasks designed:
-            ---lan. spec.
-                mixed
-                    t- demostrate map/hash/list/vector/heap... usage!!
-                    t- demostrate xxx usage!!
-                File IO
-                    read/write file 
+    ---datastru. 
+        ---basic, simple, from stl 
+            // heuristics 
+                linear
+                    双端队列
+                    单链表 循环链表...
+                    并查集
+                    最大团
+                    最大独立集 
+                    stack,queue
+                        use stack/xx container classs, we have to include standerd header files 
+                        do not forget std:: namespace !
+                        do not forget template arguments 
+                    multiset：多重集合，其实就是 set 集合的扩展版。
+                        唯一的不同是 set 集合中一个值只能出现一次，
+                        而多重集合中一个值可以出现多次。
+                        +尝试
+                    hash table 
+                        hash算法的意义在于提供了一种快速存取数据的方法,它用一种算法建立键值与真实值之间的对应关系
+                        key值,一般都是用某种算法(所谓的Hash算法)算出来的.例如:字符串的Hash算法, 
+                        这种转换是一种压缩映射，也就是，散列值的空间通常远小于输入的空间，不同的输入可能会散列成相同的输出，    
+                            而不可能从散列值来唯一的确定输入值
+                        BKDRHash无论是在实际效果还是编码实现中，效果都是最突出的。APHash也是较为优秀的算法。 
+                        LINK
+                            https://blog.csdn.net/caoshangpa/article/details/78782378
+                        哈希表(hash table)是从一个集合A到另一个集合B的映射(mapping)。
+                        a被称为键值(key)，b被称为a的hash值(hash value)
+                        A: 三位整数    hash(x) = x % 10    B: 一位整数
+                        在git中，文件内容为键值，并用SHA算法作为hash function，将文件内容对应为固定长度的字符串(hash值)。
+                        如果文件内容发生变化，那么所对应的字符串就会发生变化。git通过比较较短的hash值，就可以知道文件内容是否发生变动
+                        为了安全起见，计算机不会直接保存该字符串，而是保存该字符串的hash值(使用MD5、SHA或者其他算法作为hash函数)
+                        黑客闯入了数据库中的密码记录，他能看到的也只是密码的hash值。
+                        很难从hash值去推测键值。因此，黑客无法获知用户的密码。
+                        hash碰撞(hash collision)或者hash 冲突。比如网络协议中的checksum就可能出现这种状况
+                        已经有实验表明，MD5算法有可能发生碰撞，也就是不同的明文密码生成相同的hash值，这将给系统带来很大的安全漏洞。
+                            (参考hash collision）
+                        复杂度直接降到O(1)。Hash表就能够达到这样的效果
+                        存储位置只是表中的存储位置，并不是实际的物理地址)称作为Hash地址
+                        则当想要找到“李四”的信息时，直接根据“李四”和Hash函数计算出Hash地址即可。
+                        DETAIL 
+                            假如对上述的联系人信息进行存储时，采用的Hash函数为：姓名的每个字的拼音开头大写字母的ASCII码之和。
+                            首先，它浪费了大量的存储空间，空间利用率只有4/174，不到5%
+                            另外，根据Hash函数计算结果之后，address(张三)和address(张帅)具有相同的地址，这种现象称作冲突
+                            尽量考虑关键字的分布特点来设计函数使得Hash地址随机均匀地分布在整个地址空间当中。
+                        *通常有以下几种构造Hash函数的方法，在数学上尽量保证平均  
+                            根据特征
+                                线性函数:取关键字或者关键字的某个线性函数为Hash地址，即address(key)=a*key+b;
+                                平方取中法:对关键字进行平方运算，然后取结果的中间几位作为Hash地址。假如有以下关键字序列{421，
+                                    423，436}，平方之后的结果为{177241，178929，190096}，那么可以取{72，89，00}作为Hash地址。
+                                折叠：将关键字拆分成几部分，然后将这几部分组合在一起，以特定的方式进行转化形成Hash地址。假如知道
+                                    图书的ISBN号为8903-241-23，可以将address(key)=89+03+24+12+3作为Hash地址。
+                                分析数字：第一位，第二位，第三位重复的可能性大，取这三位造成冲突的机会增加，所以尽量不取前三位，取后三位比较好
+                            普适方法
+                                除留取余法：如果知道Hash表的最大长度为m，可以取不大于m的最大质数p，然后对关键字进行取余运算，address(key)=key%p。
+                                    p选择的好的话，能够最大程度地减少冲突，p一般取不大于m的最大质数。
+                                    典型的除留取余法Hash函数是time33算法。PHP的数组就是把这个作为哈希函数。
+                                随机数：H(key)=random(key) ,其中random为随机函数。通常用于关键字长度不等时采用此法。
+                        hash表大小要仔细确定
+                            还有一种情况时可能事先不知道最终需要存储的记录个数，则需要动态维护Hash表的容量，此时可能需要重新计算Hash地址。
+                        如果遇到冲突，哈希表一般是怎么解决的呢？具体方法有很多，百度也会有一堆，最常用的就是开放定址法和链地址法。
+                            如果遇到冲突的时候怎么办呢？就找hash表剩下空余的空间，找到空余的空间然后插入。就像你去商店买东西，  
+                                发现东西卖光了，怎么办呢？找下一家有东西卖的商家买呗。
+                            有一个问题就是如果空间不足，那他无法处理冲突也无法插入数据，因此需要装填因子(空间/插入数据)>=1。
+                                链地址法的原理时如果遇到冲突，他就会在原地址新建一个空间，然后以链表结点的形式插入到该空间。
+                                    我感觉业界上用的最多的就是链地址法。
+                                当然也有最坏的情况就是hash值全都映射到同一个地址上，这样哈希表就会退化成链表
+                                只要不要把hash计算的公式外漏出去并且有人故意攻击（用兴趣的人可以搜一下基于哈希冲突的拒绝服务攻击）
+                                    ，一般也不会出现这种情况。
+                        要本着易于编码调试的原则，个人认为BKDRHash是最适合记忆和使用的
+                            https://blog.csdn.net/u012965373/article/details/38929637
+                        example 
+                            what i thought out :
+                                电话号码本查询
+                                    zhangsan 13980593357,20
+                                    lisi 15828662334,18
+                                    wangwu 13409821234,16
+                                    zhangshuai 13890583472,30...
+                                    ..
+                                store name search (kaggle )
+                                    https://www.kaggle.com/starbucks/store-locations/downloads/store-locations.zip/1
+                            poj
+                                poj3349:
+                                    //判断是否有相同的雪花，顺序无关。数字是每一个花瓣的长度
+                                        io
+                                            2
+                                            1 2 3 4 5 6
+                                            4 3 2 1 6 5
+                                            Twin snowflakes found. or No two snowflakes are alike.
+                                        solution
+                                            https://blog.csdn.net/lvshubao1314/article/details/42320263
+                                            https://blog.csdn.net/hopeztm/article/details/7832750
+                                poj3690:
+                                    //字符矩阵匹配,找到相应的子矩阵
+                                        io
+                                            3 3 2 2 2
+                                            *00
+                                            0**
+                                            *00
+
+                                            **
+                                            00
+
+                                            *0
+                                            **
+                                            3 3 2 2 2
+                                *00
+                                0**
+                                *00
+
+                                **
+                                00
+
+                                *0
+                                0*
+                                0 0 0 0 0
+
+                                Case 1: 1
+                                Case 2: 2
+                            solution 
+                                https://blog.csdn.net/u011026968/article/details/38495821
+                    广义链表
+                        对于线性表而言，n个元素都是基本的单元素，而在广义表中，这些元素不仅可以是单元素，
+                            也可以是另一个广义表。通俗的讲，在广义表中的元素，也可以是一个线性表。
                     ...
-                Network
-                    ... 
-            ---Beginner Exercises online with Suggested Study Order! 
-                //  
-                    heuristics: 
-                        部分高中数学题目，尤其是数论有关
-                        poj水题目, or other ojs 
-                        c语言遗产
-                        data sci., basic vis. , img based
-                        search online "basic programming tasks" 
-                            https://www.w3resource.com/cpp-exercises/basic/index.php
-                            ...
-                //
-                old ones:
-                    t- sum/multiple/xxx(basic math) two numbers 
-                        input: 12 24
-                        output: 36
-                        check: with calcu. (online is ok)
-                    t- loop over to print numbers/shapes
-                        10times 2d loop
-                        yanhui triangle 
-                        triangle with * 
-                        ...
-                    t- dsf- jitu tonglong 
-                    t- dsf- 水仙花数， xxx数
-                https://www.w3resource.com/cpp-exercises/basic/index.php
-                    t- Print the American flag
-                        expected io: clear 
-                    t- find the area of Scalene Triangle
-                        expected io:
-                            Input the length of a side of the triangle : 5
-                            Input the length of another side of the triangle : 6
-                            Input the angle between these sides of the triangle : 6
-                            The area of the Scalene Triangle is : 1.56793
-                        n28, https://www.w3resource.com/cpp-exercises/basic/index.php
-                    t- convert temperature in Celsius to temperature in Fahrenheit
-                        ref. https://www.w3resource.com/cpp-exercises/basic/index.php   
+                tree 
+                    基本树的各种遍历
+                    优先队列
+                    二叉查找树
+                    平衡查找树
+                    散列表
+                    单词查找树
+                    堆 红黑 AVL 斐波那契堆 van Emde 树 kd-树（搜索树） BSP树 线段树  博弈树  
+                    A*  双向广度优先搜索  ida* algorithm  树状数组  左偏树  多串匹配树  
+                    字典树 
+                    无根树  
+                    trie树(静态建树、动态建树)  
+                    B-树、B+树、B*树
+                    位置树
+                    四叉树：非均匀网格生成
+                    八叉树
+                    哈夫曼树
+                graph 
+                        构建
+                            图型结构的四种存储结构
+                            https://zhuanlan.zhihu.com/p/30343791
+                            https://pic3.zhimg.com/80/v2-c444b84c2bcee24205771ec817f4926a_hd.jpg
+                            无向图和有向图的存储结构是有区别的
+                            数据结构其实只有两种，线性表的顺序结构，和线性表的链式结构
+                            +
+                                邻接表存储是表示实际上意义的东西，邻接矩阵只是一种简化思路
+                                线性链表--只有一个（或扩展成多个）链接域
+                                树--有两（左右孩子）（或扩展成多个）个链接域
+                                图--有无穷个边，链接域
+                                    这时候需要特殊处理：把边链式存储！：：邻接表存储法
+                            1.数组，邻接矩阵
+                                利用两个数组分别存储顶点（vector）和边（edge）。 
+                                顶点用一维数组
+                                边用二维数组存储：一个矩阵，无向图的二维数组是关于对角线对称的
+                            2.邻接表存储
+                                弧头和弧尾都是指顶点，在G1中，对于Ea来说V1是弧头，V2是弧尾
+                                其实就利用一个一维数组存储链表
+                                数组数据类型：
+                                    data域：存储顶点（Vi）的数据信息。 
+                                    firstarc域：顾名思义就是该域指向与顶点（Vi）相连的第一条弧（arc）,
+                                        这里指的第一条并没有特定的顺序，只是为了和之后的弧进行区分而出现的概念。
+                                表节点中有三个域
+                                    adjvex，next, info
+                                无向图的度就是链表中表节点的个数
+                                有向图的度
+                                    以（Vi）顶点为头结点的链表后面接着的表节点中是以顶点（Vi）为弧头的弧
+                                    要有向图的度还要求出有向图的入度，邻接表中的adjvex域值为i的表节点的
+                                        个数是顶点（Vi）的入度。
+                                    为了方便求有向图的入度我们引入了逆邻接表
+                                +逆邻接表
+                            2->十字链表法
+                                所谓的十字链表法就是结合了邻接表和逆邻接表，以方便求出图形结构的出度和入度
+                                邻接表的改进
+                            1->邻接多重表
+                                邻接多重表是针对于无向图改进的存储结构
+                                这对我们对边进行操作的时候十分不便，假设我要删除一条边，
+                                    那么我要在两条链表中去删除这条边两次，这增加了我们程序的复杂度
+                                让一条边仅仅用一个节点表示
+                                一条边由一个节点六个域表示
+                                    ivex和jvex域：这两个域中存储的是顶点的位置,因为一条边连接两个顶点
+                                    ilink和jlink域：这两个域中存放的是边的位置，ilink中存储顶点Vi的下一条边的位置。 
+                                    info域：可以用来存储边的权值。 
+                                    头结点
+                        Voronoi图
+                        ...  
+        ---deeper
+            //很多数据结构都不必非要从头实现（如果非要创造新的），在c++ stl中可以复用！
+            book--算法竞赛入门经典
+                file:///C:/Users/yzy/Desktop/base_c++_oj%20hierarchy/r0-res/chs/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8+%E5%AE%8C%E6%95%B4%E7%89%88.pdf
+                ch01
+                ch02 
+                    ...
+                ch03 
+                ch04 
+                ch05 
+                ch06 
+                ch07 
+                ch08 
+                ch09 
+                ch10 
+                ch11 
+            book--算法java
+                ch01
+                ch02 
+                    ...
+                ch03 
+                ch04 
+                ch05 
+                ch06
+            book--算法导论 en
+    ---algorithm
+        learnfromseed--exp 
+            //在熟悉结构的基础上解决问题
+            ---overview
+                基本任务
+                    排序查找搜索
+                算法思想
+                    动态规划，分治，xxx
+                小领域
+                    图论，数论，计算几何，博弈，组合数学
+            ---math related 
+                整数问题
+                    组合数学
+                        普通涂色问题 组合数学-Polya定理
+                        约瑟夫问题
+                        卡特兰数是组合数学中一个常出现在各种计数问题中的数列
+                    数论问题：
+                        辗转相除（两行内）
+                        任意进制间的转换
+                        大整数的分解
+                        求素数
+                            https://www.zhihu.com/question/307930531/answer/566185328
+                        最大公约数(Gcd)两种算法(Euclid && Stein) 
+                    数字游戏
+                    博弈类
+                精度
+                    提高精度
+                        高精度四则运算
+                        高精度pi计算
+                            使用
+                高阶问题
+                    矩阵快速乘法
+                    快速傅里叶变换
+                    fibonacci数列 &
+                        用数组，可以在linear 时间中完成
+                        很多数列问题都可以
+                    解线性方程组
+                        +在图形学中应用广泛，CV中，ML中
+                        例如mesh parameterization
+                        最小化能量方程
                         -
-                    t- compute the total and average of four numbers
-                    t- show the diff. size of float, double vars. 
-                        size of bool? 
-                        expected: (test cases:)
-                            The sizeof(char) is : 1 bytes
-                            The sizeof(short) is : 2 bytes
-                            The sizeof(int) is : 4 bytes
-                            The sizeof(long) is : 8 bytes
-                            The sizeof(long long) is : 8 bytes
-                            The sizeof(float) is : 4 bytes
-                            The sizeof(double) is : 8 bytes
-                            The sizeof(long double) is : 16 bytes
-                            The sizeof(bool) is : 1 bytes
-                    t- check the upper and lower limits of integer.
-                        (use INT_MAX, INT_MIN...) 
-                            The maximum limit of int data type :                  2147483647      
-                            The minimum limit of int data type :                  -2147483648     
-                            The maximum limit of unsigned int data type :         4294967295      
-                            The maximum limit of long long data type :            9223372036854775807                                                                    
-                            The minimum limit of long long data type :             -9223372036854775808                                                                  
-                            The maximum limit of unsigned long long data type :   18446744073709551615                                                                   
-                            The Bits contain in char data type :                  8               
-                            The maximum limit of char data type :                 127             
-                            The minimum limit of char data type :                 -128            
-                            The maximum limit of signed char data type :          127             
-                            The minimum limit of signed char data type :          -128            
-                            The maximum limit of unsigned char data type :        255             
-                            The minimum limit of short data type :                -32768          
-                            The maximum limit of short data type :                32767           
-                            The maximum limit of unsigned short data type :       65535
-                    t- find the area of any triangle using Heron's Formula.
-                        Heron's formula states that the area of a triangle whose sides have lengths
-                        semiperimeter of a polygon is half its perimeter
-                        exp:
-                            Input the length of 1st side of the triangle : 5
-                            Input the length of 2nd side of the triangle : 6
-                            Input the length of 3rd side of the triangle : 7
-                            The area of the triangle is : 14.6969
-                    t- calculate area of an equilateral triangle
-                        exp:
-                            Input the value of the side of the equilateral triangle: 5
-                            The area of equilateral triangle is: 10.8253
-                    t- calcu. the area of a hexagon
-                        io:
-                            Input the side of the hexagon: 6
-                            The area of the hexagon is: 93.5307
-                    t- compute the shortest distance between two points on the surface of a sphere
-                        given https://en.wikipedia.org/wiki/Great-circle_distance as ref. 
-                            + radians, the calcu. of arc length d 
-                                what is latitude? be transfered to angle? radiance? 
-                                radians is bet. (0-3.1415... when we have angle bet. 0 to 360? unit circle? )
-                        io:
-                            Input the latitude of coordinate 1: 25
-                            Input the longitude of coordinate 1: 35
-                            Input the latitude of coordinate 2: 35.5
-                            Input the longitude of coordinate 2: 25.5
-                            The distance between those points is: 1480.08
-                    t- gen. primes within 1000000 quickly(not using table, hard for coding)
-                        io: clear 
-                    t- mem allocation precisely 
-                    t- string calculator 
-                        io clear.
-                        ltc. 
-                    t- swap all digits of a decimal number 
-                    t- from decimal to binary calcu. or, other forms  
-                        ltc.
-                    t- swap only two digits, the first and the last 
-                        -> math calcu. 
-                    t- string replacement with in a string text 
-                        io clear. 
-                    t- find max element in an array with custom comparation func. std::max_ele...
-                        http://www.cplusplus.com/reference/algorithm/max_element/   
-                https://edabit.com/challenges/cpp
-                    t- validate a string by checking if there is any space 
-                        hasSpaces("hello") ➞ false
-                        hasSpaces("hello, world") ➞ true
-                        hasSpaces(" ") ➞ true
-                        hasSpaces("") ➞ false
-                        hasSpaces(",./!@#") ➞ false   
-                https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/ leetcode!    
-                    restricted, but still, can observe some 
-                DS free tasks from oj! for all lan. (vs lan-feature based)
-            ---oj hierarchy ---x10days 
-                DS based tasks(not only stl)
-                    // heuristics:
-                        NP problems(theory review first)
-                        oj 
-                        books 
-                    simple-ones, use set, map, 
-                    list-based 
-                        t- ...
-                    tree-based 
-                        basic bin. tree
-                        advanced trees:
-                        ...
-                    graph-based 
-                    created_stru-based 
-                    t- demostrate xxx DS!!
-                Algo. based 
-                    // algo problems?? NP hard? 
-                    t- demostrate diff. sorting algos! 
-                    t- demostrate xxx algos!
-                -> vis. and interaction with algos. 
-                    proj.
-                mixed, competition 
-                    huawei 
-                    tencent 
+                    解线性规划问题
+                        单纯形算法
+            ---NP hard problems 
+                TSP Travelling salesman problem
+                Minesweeper 
+                Knapsack problem
+                Sudoku
+                Set TSP problem
+                Hitori一个数字矩阵
+                马踏棋盘
+                    其实是哈密顿回路问题，但是有棋盘大小制约，本质是NP hard
+                Graph coloring
+                最小st割问题
+                子集合加总问题
+                    给定集合{−7, −3, −2, 5, 8}，答案是YES，因为子集{−3, −2, 5}的数字和是0
+                    可以想成是背包问题的一个特例
+                圍棋是一種 PSPACE-hard 的問題
+                +各种棋类
+                    概括：
+                        启发式搜索和优化减枝的过程
+                        国际象棋（他是台湾人，说的是西洋棋）的状态复杂度是 2^64 次方，而围棋则达到 2^128 次方
+                        就在今天2016-1-28，《Nature》杂志以封面论文的形式，介绍了 
+                            Google DeepMind 开发的人工智能程序 AlphaGo，它击败了欧洲围棋冠军樊麾
+                    围棋--唯一一种电脑下不赢人的大众棋类
+                        围棋虽说是“千古无同局”，
+                        但在局部及开局还是有很多相似或者相同的模式会反复出现，
+                        DCNN能够抓住这些模式并且在实战中灵活运用。
+                    象棋跳棋
+            ---mixed problems 
+                基本排序算法*4 
+                    归并排序
+                二分查找
+                背包问题
+                记忆化搜索
+                各种字符串处理算法！！
+                    KMP算法
+                        KMP算法俗称“看(K)毛(M)片(P)算法”
+                        KMP算法是比较难以理解的算法，但是不繁琐，而是很精妙，值得理解
+                    最长上升子序列(Longest Increasing Subsequence)问题
+                    最长公共子序列LCS问题					
+                    最大子序列 &
+                        这个问题之所以有吸引力，主要是因为存在求解它的很多算法，而这些算法的性能差异又很大
+                        非常典型的算法优化问题，有多种复杂度实现版本
+                        max sum value in subsequence :
+                        1.using 2 times for loop :
+                            a b c d e f ...
+                                ...
+                            the ,maximum computational complex is : O(N^2)
+                            this is what who havent leared algorithm has wroten
+                            pcode：
+                                loop outlier array from start to end 
+                                    loop from i to end 
+                                        check if larger than max 
+                        2.using DP algorithm 
+                            can run to Nlog(N)
+                            this can be applied to other applications 
+                            pcode:
+                                分三种情况进行递归，选择最小的
+                        3.using some mathematical tricks :
+                            can be O(N)
+                            maybe cannot be applied to others 
+                            pcode:
+                                loop the array 
+                                    if current sum is lower than 0
+                                        reset max to next value 
+                                    else
+                                        add next value
+                    levenstein距离
+                        最后用了dp的思想解决
+                    Boyer-Moore字符串查找算法
+                    Rabin-Karp指纹字符串查找算法 
+                各种经典策略！！（高级设计分析技术）
+                    DP策略
+                        四边形不等式理论
+                        状态DP
+                    分治策略
+                    贪心策略
+                    回溯法
+                        八皇后问题是应用回溯法求解的典型案例。
+                        https://web.archive.org/web/20071218075305/http://www.datastructures.info/the-backtracking-algorithmmethod/
+                    二分 
+                    递归
+                        子问题的解解决父问题
+                        思维过程：**
+                                1.找子问题：多走两步，最好可以证明是子问题（明确画出来）
+                                2.设计参数：变量化参数化(找出原来的为啥不行...)
+                                    参数要有一定的表达能力
+                                    参数要同时表达问题和子问题--观察问题和子问题啥不同
+                                        规模不同
+                                        借助的柱子不同
+                                        ...不同
+                                    写出形式化表达：：
+                                        父问题：hanoi(n, f, b, t)
+                                        子问题：
+                                            hanoi(n-1, f, t, b);
+                                            hanoi(1, f, b, t);
+                                            hanoi(n-1, b, f, t);
+                                3.设计停止条件
+                        +这里，都写一下：
+                            https://segmentfault.com/a/1190000011734845
+
+                        
+                        Factorial阶乘
+                        汉诺塔问题
+                            描述：
+                                A->C借助B
+                                A上尺寸由下到上依次变小
+                                每次只能移动一个圆盘；
+                                大盘不能叠在小盘上面。
+                            初始结构只是在A上的情况和任意初始结构（arbitrary initial configuration）
+                                的解法不同
+                            子问题的解解决父问题
+                            ---
+                            pcode:
+                                hanoi(a,b,c){//abc 表示个数（不充分）
+                                    if(a==1){
+                                        
+                                    }else{
+                                        print a->b;
+                                        hanoi(a-1,b,c);
+                                        print b->c;
+                                    }
+                                }
+                                ##以上废弃 ：子问题不明确，变量设计不合理 
+
+                                t是二维数组
+                                H(imax,t[0],t[1],t[2])	
+                                    H(imax - 1, t[0],t[2],t[1])
+                                    print t[],t[]
+                                    H(imax - 1, t[1],t[0],t[2])
+                                ##自己设计，理论上可以
+
+                                H(n,'a','b','c')
+                                ##经过理论分析，最简单设计：：父子之间，n变化，借助的柱子也变化（不仅仅是规模变化）
+                        -
+                运筹学问题 ！！
+                    TSP问题
+                    SAT问题
+                        SAT的问题被证明是NP难解的问题。
+                            目前解决该问题的方法主要有完备的方法和不完备的方法两大类。
+                            完备的方法优点是保证能正确地判断SAT问题的可满足性，
+                            但其计算效率很低，平均的计算时间为多项式阶
+                        传统的方法有：枚举法、局部搜索法和贪婪算法等，但由于搜索空间大，
+                            问题一般难以求解。对于像SAT一类的NP难问题，
+                            采用一些现代启发式方法如演化算法往往较为有效。
+                    NP问题与近似算法
+                区间最值算法ST
+                    ST 算法是 RMQ（Range Minimum/Maximum Query）
+                    中一个很经典的算法，它天生用来求得一个区间的最值
+                多线程算法
+            ---linear 
+                单链表，循环链表...
+                并查集
+                最大团
+                最大独立集
+                双端队列
+            ---tree 
+                基本树的各种遍历
+                优先队列
+                儿叉查找树
+                平衡查找树
+                散列表
+                单词查找树
+                霍夫曼压缩
+                堆
+                红黑
+                AVL
+                斐波那契堆
+                van Emde 树
+                kd-树（搜索树）
+                BSP树
+                线段树
+                博弈树
+                A*
+                双向广度优先搜索
+                ida* algorithm
+                树状数组
+                左偏树
+                多串匹配树
+                字典树
+                无根树
+                Kruskal 最小生成树
+                trie树(静态建树、动态建树) 
+                BST 二叉搜索树
+                B-树、B+树、B*树
+                位置树
+            ---graph
+                basic
+                    创建binary tree 
+                        Time Complexity: O(n), where n is the total number of nodes in the tree.
+                        其实插入和检索可以类似，只是在检索数据的时候赋值而已
+                        给出层次遍历的情况：：
+                            pcode:
+                                void Cons(Node curNode){
+                                    curNode.val=Q.pop().val
+                                    Cons(curNode.left);
+                                    Cons(curNode.right);
+                                }
+                                --false! 当然也可以给前序来创建树，那样的话用递归就可以
+                                Node* insertLevelOrder(arr[], Node* root, int i, int n) 
+                                { 
+                                    // Base case for recursion 
+                                    if (i < n) 
+                                    { 
+                                        Node* temp = newNode(arr[i]); 
+                                        root = temp; 
+                                
+                                        // insert left child 
+                                        root->left = insertLevelOrder(arr, 
+                                                root->left, 2 * i + 1, n); 
+                                
+                                        // insert right child 
+                                        root->right = insertLevelOrder(arr, 
+                                                root->right, 2 * i + 2, n); 
+                                    } 
+                                    return root; 
+                                } 
+                                --too complex!
+                                Node * insertLevelOrder(){
+                                    root=newNode(a[0]);
+                                    Queue q;
+                                    q.push(root);
+                                    i=0;
+                                    while(q.size()!=0){
+                                        curNode=q.pop();
+                                        if(i<n){
+                                            curNode->data()=a[i];
+                                        }
+                                        if(2*i + 1 < n){
+                                            //has left child 
+                                            l=newNode();
+                                            curNode->left=l;
+                                            q.push(l);
+                                        }
+                                        if(2*i + 2 < n){
+                                            r=newNode();
+                                            curNode->right=r;
+                                            q.push(r);
+                                        }
+                                        i++;
+                                    }
+                                }
+                                ---Good!
+                        给出先序遍历的情况：：
+                            Node* PreOrderInsert(a,i){
+                                if(i<n){
+                                    curNode=newNode();
+                                    curNode->data=a[i];
+                                    curNode->left=PreOrderInsert(a,i+1);
+                                    curNode->right=PreOrderInsert(a,i+2);
+                                }else{
+                                    return NULL;
+                                }
+                            }
+                            --- i should be global ; should use NULL to 
+                            int i=0;
+                            Node *PreOrderInsert(int a[], int n)
+                            {
+                                if (i < n && a[i]!=NULL)
+                                {
+                                    Node *curNode = (Node *)malloc(sizeof(Node));
+                                    curNode->data = a[i];
+                                    i++;
+                                    curNode->left = PreOrderInsert(a, n);
+                                    curNode->right = PreOrderInsert(a, n);
+                                    return curNode;
+                                }
+                                else
+                                {
+                                    i++;
+                                    return NULL;
+                                }
+                            }
+                            ---
+                    广度优先搜索
+                        实际上可以用数组和结构模拟（数组元素是结构）
+                        时间复杂度为O(V+E).即是图邻接表大小的线性函数。
+                        pcode :
+                            init Queue; boolean visited ;
+                            while(q=Q.pop()){
+                                if(Obj==q){// can have more options 
+                                    return q;
+                                }else{
+                                    Q.push(q->left())
+                                    Q.push(q->right())// can have more childs 
+                                    q.visited = true ;
+                                }
+                            }
+                        code tips:
+                            Queue:
+                                queue<Point>q;-->#include <queue>  
+                                q.front();
+                                q.pop();
+                                q.push();
+                        eg.
+                            0.Construct a complete binary tree from given array
+                            1.given [3,9,20,null,null,15,7] return value 
+                            2.find Minimum in log time 
+                                given [3,9,20,15,7] find Minimum
+                                conpare with linear method (one while loop)
+                            .
+                        ref
+                            https://www.geeksforgeeks.org/construct-complete-binary-tree-given-array/
+                            https://stackoverflow.com/questions/33852623/create-binary-tree-in-level-order-from-array
+                    寻找路径
+                    寻找连通分量
+                    最小生成树
+                    拓扑排序
+                    最短路径
+                        单源最短路径dijkstra
+                        多源最短路径
+                运筹学
+                    最大流算法
+                    最小费用流
+                    最大匹配算法
+                advanced
+                    Voronoi图
+                    四叉树：非均匀网格生成
+                    八叉树
+                    光线跟踪求交点问题
+                    铸造（casting） 问题（其实是线性规划问题）
+                    欧拉路
+                    最小度限制生成树（变种）
+                    差分约束系统的建立和求解.
+                    图的割边和割点
+                    Beam Search（集束搜索）
+                        一种启发式图搜索算法，通常用在图的解空间比较大的情况下，
+                            为了减少搜索所占用的空间和时间
+            ---computational geometry
+                空间剖分（space partitioning）
+                    三角剖分算法
+                    Delaunay三角剖分
+                图的对偶变换
+                凸包与半空间求交
+                叉乘、判线段相交、然后写个凸包. 
+                线段交点、多角形面积公式.
+        online--
+            cpu其实很慢，这就是必须要学算法的原因。
+                面对指数级或是排列组合级别的各种计算，
+                每秒几亿次的运算速度根本不够看
+            算法其实就是楼房地基一个重要的组成部分。勿在浮沙筑高台，
+            学好算法，是让自己能够在程序员的道路上走得更远的一个重要保证。
+        book-- 
+        book--          
+    ---libs.
+    ---比赛面试资源
+        定期比赛网站
+            Bestcoder：我们常打的比赛，题目质量待考究，不过用来每周练练手还是不错的。
+            Codeforces：题目质量较高，你的得分rating也是未来找工作的一个可信度很高的衡量标准。
+            Topcoder：没打过，听说很难。
+    ---for review---prog. task list -- from beginner to expert  
+        ---lan. spec.
+            // not so much for oj coding 
+            mixed
+                t- demostrate map/hash/list/vector/heap... usage!!
+                t- demostrate xxx usage!!
+            File IO
+                read/write file 
+                ...
+            Network
+                ... 
+        ---Beginner Exercises 
+            // DS free tasks from oj! for all lan. (vs lan-feature based)
+            //  heuristics: 
+                部分高中数学题目，尤其是数论有关
+                poj水题目, or other ojs 
+                c语言遗产
+                data sci., basic vis. , img based
+                search online "basic programming tasks" 
+                    https://www.w3resource.com/cpp-exercises/basic/index.php
                     ...
-                ---
-                reasoning view for triple analysis(graph)
+                basic math problems
+                small logic problems
+                paint in command linea 
+                (what you have done as bechlor)
+                https://blog.csdn.net/qq429205464/article/details/6732899
+                https://blog.csdn.net/qq_17246605/article/details/52136415
+            t- math calcu:
+                add 10 numbers together - use calcu.or to varify
+                求1+2+3+......+n
+                sum of 2d array/3d array - calculator
+                gaussian blur, stencil function , compare from net
+                出现次数最多的数
+                zigzag-https://blog.csdn.net/wangfengfan1/article/details/47071095
+                    -later 
+            t- find.spec.numbers
+                prime
+                shuixianhua shu
+            t- 基本排序算法*4 
+                -shouldbesummerized
+                -net
+            t- rabbit:20 iteraters, 4 each line 
+                -snippets
+            t- fibonaqi:store 40 numbers , F(1)=1，F(2)=1, F(n)=F(n-1)+F(n-2)（n>=3，n∈N*）
+                loop / swap
+                -snippets
+            t- 百钱买百鸡:公鸡5文钱一只，母鸡3文钱一只，小鸡3只一文钱， 用100文钱买一百只鸡,其中公鸡，
+                母鸡，小鸡都必须要有，问公鸡，母鸡，小鸡要买多少只刚好凑足100文钱？
+                brust loop
+                -snippets
+            t- 魔方矩阵calcu-将自然数1到N^2填充N行N列的方阵，使方阵中每行、每列及两条主对角
+                线上的N个数的和都等于N*(N^2+1)/2，这样的方阵称为N阶魔方矩阵（幻方）
+                +
+                    strategy 
+                        魔方矩阵的构造分为三种情况：N为奇数、N为4的倍数、N为其他数（偶数，4N+2的形式）
+                        https://www.cnblogs.com/xkfz007/archive/2012/11/13/2767407.html
+                    brust loop ok 
+            t- Magic square judge
+                +https://blog.csdn.net/qq_36203090/article/details/55223867
+                loop/2d array
+            t- sum/multiple/xxx(basic math) two numbers 
+                input: 12 24
+                output: 36
+                check: with calcu. (online is ok)
+            t- loop over to print numbers/shapes
+                10times 2d loop
+                yanhui triangle 
+                triangle with * 
+                ...
+            t- dsf- jitu tonglong 
+            t- dsf- 水仙花数， xxx数
+            ---https://www.w3resource.com/cpp-exercises/basic/index.php
+            t- Print the American flag
+                expected io: clear 
+            t- find the area of Scalene Triangle
+                expected io:
+                    Input the length of a side of the triangle : 5
+                    Input the length of another side of the triangle : 6
+                    Input the angle between these sides of the triangle : 6
+                    The area of the Scalene Triangle is : 1.56793
+                n28, https://www.w3resource.com/cpp-exercises/basic/index.php
+            t- convert temperature in Celsius to temperature in Fahrenheit
+                ref. https://www.w3resource.com/cpp-exercises/basic/index.php   
+                -
+            t- compute the total and average of four numbers
+            t- show the diff. size of float, double vars. 
+                size of bool? 
+                expected: (test cases:)
+                    The sizeof(char) is : 1 bytes
+                    The sizeof(short) is : 2 bytes
+                    The sizeof(int) is : 4 bytes
+                    The sizeof(long) is : 8 bytes
+                    The sizeof(long long) is : 8 bytes
+                    The sizeof(float) is : 4 bytes
+                    The sizeof(double) is : 8 bytes
+                    The sizeof(long double) is : 16 bytes
+                    The sizeof(bool) is : 1 bytes
+            t- check the upper and lower limits of integer.
+                (use INT_MAX, INT_MIN...) 
+                    The maximum limit of int data type :                  2147483647      
+                    The minimum limit of int data type :                  -2147483648     
+                    The maximum limit of unsigned int data type :         4294967295      
+                    The maximum limit of long long data type :            9223372036854775807                                                                    
+                    The minimum limit of long long data type :             -9223372036854775808                                                                  
+                    The maximum limit of unsigned long long data type :   18446744073709551615                                                                   
+                    The Bits contain in char data type :                  8               
+                    The maximum limit of char data type :                 127             
+                    The minimum limit of char data type :                 -128            
+                    The maximum limit of signed char data type :          127             
+                    The minimum limit of signed char data type :          -128            
+                    The maximum limit of unsigned char data type :        255             
+                    The minimum limit of short data type :                -32768          
+                    The maximum limit of short data type :                32767           
+                    The maximum limit of unsigned short data type :       65535
+            t- find the area of any triangle using Heron's Formula.
+                Heron's formula states that the area of a triangle whose sides have lengths
+                semiperimeter of a polygon is half its perimeter
+                exp:
+                    Input the length of 1st side of the triangle : 5
+                    Input the length of 2nd side of the triangle : 6
+                    Input the length of 3rd side of the triangle : 7
+                    The area of the triangle is : 14.6969
+            t- calculate area of an equilateral triangle
+                exp:
+                    Input the value of the side of the equilateral triangle: 5
+                    The area of equilateral triangle is: 10.8253
+            t- calcu. the area of a hexagon
+                io:
+                    Input the side of the hexagon: 6
+                    The area of the hexagon is: 93.5307
+            t- compute the shortest distance between two points on the surface of a sphere
+                given https://en.wikipedia.org/wiki/Great-circle_distance as ref. 
+                    + radians, the calcu. of arc length d 
+                        what is latitude? be transfered to angle? radiance? 
+                        radians is bet. (0-3.1415... when we have angle bet. 0 to 360? unit circle? )
+                io:
+                    Input the latitude of coordinate 1: 25
+                    Input the longitude of coordinate 1: 35
+                    Input the latitude of coordinate 2: 35.5
+                    Input the longitude of coordinate 2: 25.5
+                    The distance between those points is: 1480.08
+            t- gen. primes within 1000000 quickly(not using table, hard for coding)
+                io: clear 
+            t- mem allocation precisely 
+            t- string calculator 
+                io clear.
+                ltc. 
+            t- swap all digits of a decimal number 
+            t- from decimal to binary calcu. or, other forms  
+                ltc.
+            t- swap only two digits, the first and the last 
+                -> math calcu. 
+            t- string replacement with in a string text 
+                io clear. 
+            t- find max element in an array with custom comparation func. std::max_ele...
+                http://www.cplusplus.com/reference/algorithm/max_element/   
+            ---https://edabit.com/challenges/cpp
+            t- validate a string by checking if there is any space 
+                hasSpaces("hello") ➞ false
+                hasSpaces("hello, world") ➞ true
+                hasSpaces(" ") ➞ true
+                hasSpaces("") ➞ false
+                hasSpaces(",./!@#") ➞ false   
+            ---https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/ leetcode!    
+                restricted, but still, can observe some
+            t- paint in command line - loop/ifelse
+                triangles
+                form of v / other alphabets 
+                form of chinese words   
+            t- levenshtein distance -later, dp
+            t- hanoi: from a to c with help of b 
+                recur.                
+        ---oj hierarchy （原子问题） 
+            DS based tasks(not only stl)
+                // heuristics:
+                    NP problems(theory review first)
+                    oj 
+                    books 
+                simple-ones, use set, map, 
+                list-based 
+                    t- ...
+                tree-based 
+                    basic bin. tree
+                    advanced trees:
                     ...
-            ---extension 
-                field calculus 
-                    // field background first!! 
-                    t- demostrate xxx process! (phy, chem, machinary...)
-                -> field vis. and interaction (*center of computer graphics for vis. and inter.)
-                    proj. --> will be split into pieces, not basic learning process, not so good but interesting
-        
+                graph-based 
+                created_stru-based 
+                t- demostrate xxx DS!!
+            Algo. based 
+                // algo problems?? NP hard? 
+                t- demostrate diff. sorting algos! 
+                t- demostrate xxx algos!
+            -> vis. and interaction with algos. 
+                proj.
+            competition 
+                huawei 
+                tencent 
+                ...
+            ---
+            reasoning, triple analysis(graph)
+                ...
+        *---mixed problem (+刷题)
+            //res 
+                https://blog.csdn.net/h273979586/article/details/69786603 
+                http://www.pythontip.com/acm/problemCategory
+                查找（二分、哈希）：poj3349、poj1002、hdu2141、hdu1025
+                串（AC自动机、KMP）：hdu3695、hdu2203、sdut2411、poj2406、hdu1358、hdu3336
+                并查集：poj2236、poj2524、poj1182、poj1611、hdu1232
+                字典树：poj2503、poj2001、hdu1247、hdu1075、hdu1251
+                树状数组：hdu1556、poj1195、poj3321、hdu1541/poj2352
+                线段树：poj2155、poj1195、poj3468、poj3264、hdu1556、hdu1698、hdu1754、hdu1166
+                划分树：poj2104、sdut2610
+            ---unknown mixed source 
+                数组右移k位
+                AABB空间搜索 ++
+                    其实是通过剪枝加快搜索
+                    建立一个树结构，只要树高减小，可能能到logN
+            ---poj
+                poj 1050 最大子矩阵 ++
+                    其实是一个矩阵，但是可以简化成数组问题（压扁）
+                    原子问题：最大子序列，dp
+                poj 3750 小孩报数问题 ++
+                    用循环链表更合适 
+                    原子问题：循环链表
+    ---build a data processing framework
+        data 
+            https://www.kaggle.com/AnalyzeBoston/crimes-in-boston
+                date and location info 
+            https://www.kaggle.com/gsi-japan/global-map-japan-data/downloads/global-map-japan-data.zip/1
+                img info
+            https://www.kaggle.com/doit-intl/autotel-shared-car-locations
+                location information 
+            https://www.kaggle.com/open-flights/flight-route-database
+                route information 
+            https://www.kaggle.com/fivethirtyeight/uber-pickups-in-new-york-city
+                time and adress data info 
+            https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data
+                temperature and place 
+            https://www.kaggle.com/google/google-landmarks-dataset#train.csv
+            https://www.kaggle.com/c/landmark-retrieval-challenge
+                not c++ / deep lerning project 
+            https://www.kaggle.com/START-UMD/gtd
+                location , summary xxx
+            
+        persers 
+            csv reader  
+                https://github.com/ben-strasser/fast-cpp-csv-parser
+                    head only 
+                https://github.com/vincentlaucsb/csv-parser
+                https://github.com/d99kris/rapidcsv
+            json reader 
+                https://github.com/dropbox/json11
+                https://github.com/open-source-parsers/jsoncpp
+                https://github.com/taocpp/json
+                https://github.com/nbsdx/SimpleJSON
