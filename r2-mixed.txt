@@ -1012,31 +1012,31 @@
                                     头结点
                         Voronoi图
                         ...  
-        ---deeper
-            //很多数据结构都不必非要从头实现（如果非要创造新的），在c++ stl中可以复用！
-            book--算法竞赛入门经典
-                file:///C:/Users/yzy/Desktop/base_c++_oj%20hierarchy/r0-res/chs/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8+%E5%AE%8C%E6%95%B4%E7%89%88.pdf
-                ch01
-                ch02 
-                    ...
-                ch03 
-                ch04 
-                ch05 
-                ch06 
-                ch07 
-                ch08 
-                ch09 
-                ch10 
-                ch11 
-            book--算法java
-                ch01
-                ch02 
-                    ...
-                ch03 
-                ch04 
-                ch05 
-                ch06
-            book--算法导论 en
+    
+        //很多数据结构都不必非要从头实现（如果非要创造新的），在c++ stl中可以复用！
+        book--算法竞赛入门经典
+            file:///C:/Users/yzy/Desktop/base_c++_oj%20hierarchy/r0-res/chs/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8+%E5%AE%8C%E6%95%B4%E7%89%88.pdf
+            ch01
+            ch02 
+                ...
+            ch03 
+            ch04 
+            ch05 
+            ch06 
+            ch07 
+            ch08 
+            ch09 
+            ch10 
+            ch11 
+        book--算法java
+            ch01
+            ch02 
+                ...
+            ch03 
+            ch04 
+            ch05 
+            ch06
+        book--算法导论 en
     ---algorithm
         learnfromseed--exp 
             //在熟悉结构的基础上解决问题
@@ -1631,6 +1631,7 @@
                 ...
         *---mixed problem (+刷题)
             //res 
+                http://www.pythontip.com/acm/problemCategory
                 https://blog.csdn.net/h273979586/article/details/69786603 
                 http://www.pythontip.com/acm/problemCategory
                 查找（二分、哈希）：poj3349、poj1002、hdu2141、hdu1025
@@ -1652,6 +1653,9 @@
                 poj 3750 小孩报数问题 ++
                     用循环链表更合适 
                     原子问题：循环链表
+                jiuduoj 1078 https://www.cnblogs.com/qinduanyinghua/p/6418728.html
+                    
+
     ---build a data processing framework
         data 
             https://www.kaggle.com/AnalyzeBoston/crimes-in-boston
